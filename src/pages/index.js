@@ -1,16 +1,15 @@
 import * as React from 'react';
-
-import Layout from '../components/layout';
-import { GlobalStyle } from '../styles/GlobalStyle';
 import Header from '../components/header';
+import styled from 'styled-components';
+
+const StyledIndex = styled.div`
+  position: relative;
+`;
 
 const IndexPage = () => (
-  <>
-    <GlobalStyle />
-    <Layout>
-      <Header />
-    </Layout>
-  </>
+  <StyledIndex>
+    <Header />
+  </StyledIndex>
 );
 
 export default IndexPage;
