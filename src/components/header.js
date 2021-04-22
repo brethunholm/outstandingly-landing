@@ -1,10 +1,12 @@
-import * as React from "react"
+import * as React from 'react';
+import styled from 'styled-components';
+
+const StyledHeader = styled.div``;
 
 const Header = ({ siteTitle }) => (
- <div>
-   <h1>Outstandingly</h1>
- </div>
-)
+  <StyledHeader>
+    <h1>Outstandingly</h1>
+  </StyledHeader>
+);
 
-
-export default Header
+export default Header;
