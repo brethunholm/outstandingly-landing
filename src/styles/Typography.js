@@ -1,10 +1,6 @@
 import Typography from 'typography';
+import lincolnTheme from 'typography-theme-lincoln';
 
-const TypographyBase = new Typography({
-  baseFontSize: '18px',
-  baseLineHeight: 1.666,
-
-  bodyFontFamily: ['Raleway', 'san-serif'],
-});
+const TypographyBase = new Typography(lincolnTheme);
 
 export default TypographyBase;
