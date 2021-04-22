@@ -43,12 +43,14 @@ const StyledCard = styled.div`
         text-align: center;
     }
 
-.cta {
+    .cta {
     background: #FE6192;
     color: white;
     border: none;
-    padding: 5px;
+    font-size: 0.5rem;
+    height: 2rem;
 }
+
 
     @media (max-width: 900px) {
         width: 100%;
