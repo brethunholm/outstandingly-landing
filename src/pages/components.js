@@ -1,4 +1,5 @@
 import React from 'react';
+import BenefitsSection from '../components/benefitsSection';
 import SectionContainer from '../components/section-container';
 
 export default function ComponentsPage() {
@@ -21,6 +22,8 @@ export default function ComponentsPage() {
           </li>
         </ul>
       </SectionContainer>
+      {/* the benefits section */}
+      <BenefitsSection />
     </>
   );
 }
