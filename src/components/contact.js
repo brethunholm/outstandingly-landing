@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SectionContainer from './section-container';
 
 const StyledContact = styled.div`
 background: #1D1D1D;
@@ -55,6 +56,7 @@ input {
 
 export default function Contact() {
     return (
+        <SectionContainer>
         <StyledContact>
             <h1 className="title">CONTACT US</h1>
             <form className="form">
@@ -65,5 +67,6 @@ export default function Contact() {
             <button className="cta"> Send Message </button>
 
         </StyledContact>
+        </SectionContainer>
     )
 }

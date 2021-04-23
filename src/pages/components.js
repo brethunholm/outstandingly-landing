@@ -1,6 +1,8 @@
 import React from 'react';
 import BenefitsSection from '../components/benefitsSection';
+import Contact from '../components/contact';
 import SectionContainer from '../components/section-container';
+import WhatIsOutstandingly from '../components/whatIsOutstandingly';
 
 export default function ComponentsPage() {
   return (
@@ -24,6 +26,9 @@ export default function ComponentsPage() {
       </SectionContainer>
       {/* the benefits section */}
       <BenefitsSection />
+      <WhatIsOutstandingly />
+      <Contact />
+
     </>
   );
 }
