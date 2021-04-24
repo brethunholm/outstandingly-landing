@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import {
+  faLaptopCode,
+  faFileSignature,
+  faUsers,
+} from '@fortawesome/free-solid-svg-icons';
 import BenefitsCard from './BenefitsCard';
 import SectionContainer from './section-container';
 const StyledBenefits = styled.div`
@@ -37,45 +41,43 @@ export default function BenefitsSection() {
 
 const bennies = [
   {
-    title: `benefit 1`,
+    title: `Experience`,
     icon: faLaptopCode,
     content:
       'Gain real wold experience developing fullstack applications in a no wrong answers simulated work environment.',
     id: 1,
   },
   {
-    title: `benefit 2`,
-    icon: faLaptopCode,
+    title: `Networking`,
+    icon: faUsers,
     content:
-      'Gain real wold experience developing fullstack applications in a no wrong answers simulated work environment.',
+      'Build a network of like minded developers, and create lasting  relationships.',
     id: 2,
   },
+  // {
+  //   title: `Collaboration`,
+  //   icon: faLaptopCode,
+  //   content: 'Learn from others',
+  //   id: 3,
+  // },
+  // {
+  //   title: `Quality projects`,
+  //   icon: faLaptopCode,
+  //   content: 'High quality portfolio project.',
+  //   id: 4,
+  // },
+  // {
+  //   title: `Up your game`,
+  //   icon: faLaptopCode,
+  //   content:
+  //     'Outstandingly gives you accountability to help keep you focus on your projects.',
+  //   id: 5,
+  // },
   {
-    title: `benefit 3`,
-    icon: faLaptopCode,
+    title: `Get dialed in`,
+    icon: faFileSignature,
     content:
-      'Gain real wold experience developing fullstack applications in a no wrong answers simulated work environment.',
-    id: 3,
-  },
-  {
-    title: `benefit 4`,
-    icon: faLaptopCode,
-    content:
-      'Gain real wold experience developing fullstack applications in a no wrong answers simulated work environment.',
-    id: 4,
-  },
-  {
-    title: `benefit 5`,
-    icon: faLaptopCode,
-    content:
-      'Gain real wold experience developing fullstack applications in a no wrong answers simulated work environment.',
-    id: 5,
-  },
-  {
-    title: `benefit 6`,
-    icon: faLaptopCode,
-    content:
-      'Gain real wold experience developing fullstack applications in a no wrong answers simulated work environment.',
+      'Dial in your resume and fine tune your interview skills. Add high quality group projects to your portfolio.',
     id: 6,
   },
 ];
