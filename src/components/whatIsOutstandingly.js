@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SectionContainer from './section-container';
 
 const StyledCard = styled.div`
     display:grid;
@@ -77,6 +78,7 @@ const StyledCard = styled.div`
 
 export default function WhatIsOutstandingly() {
     return (
+        <SectionContainer>
         <StyledCard>
             <div className="title">
             <h1>What is <span className="highlight">Outstandingly?</span></h1>
@@ -88,5 +90,6 @@ export default function WhatIsOutstandingly() {
            </div>
             
         </StyledCard>
+        </SectionContainer>
     )
 }

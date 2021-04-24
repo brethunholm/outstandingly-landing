@@ -10,14 +10,11 @@ import Contact from '../components/contact';
 const StyledIndex = styled.div`
   position: relative;
 `;
-
 const IndexPage = () => (
   <StyledIndex>
     <Header />
     <Link to="/components">Components</Link>
-    <WhatIsOutstandingly />
     <Button />
-    <Contact />
   </StyledIndex>
 );
 
