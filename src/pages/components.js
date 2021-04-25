@@ -2,6 +2,7 @@ import React from 'react';
 import BenefitsSection from '../components/benefitsSection';
 import Button from '../components/button';
 import Contact from '../components/contact';
+import Footer from '../components/footer';
 import MembersCard from '../components/MembersCard';
 import Hero from '../components/hero';
 import SectionContainer from '../components/section-container';
@@ -35,6 +36,7 @@ export default function ComponentsPage() {
       <WhatIsOutstandingly />
       <Contact />
       <Button />
+      <Footer />
     </>
   );
 }
