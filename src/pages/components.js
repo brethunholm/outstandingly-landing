@@ -35,7 +35,9 @@ export default function ComponentsPage() {
       <MembersCard />
       <WhatIsOutstandingly />
       <Contact />
-      <Button />
+      <SectionContainer>
+        <Button text="This is a button" />
+      </SectionContainer>
       <Footer />
     </>
   );
