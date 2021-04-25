@@ -3,6 +3,7 @@ import BenefitsSection from '../components/benefitsSection';
 import Button from '../components/button';
 import Contact from '../components/contact';
 import MembersCard from '../components/MembersCard';
+import Hero from '../components/hero';
 import SectionContainer from '../components/section-container';
 import WhatIsOutstandingly from '../components/whatIsOutstandingly';
 
@@ -26,6 +27,7 @@ export default function ComponentsPage() {
           </li>
         </ul>
       </SectionContainer>
+      <Hero />
       {/* the benefits section */}
       <BenefitsSection />
       {/* member card test */}
