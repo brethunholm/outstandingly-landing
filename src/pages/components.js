@@ -3,6 +3,7 @@ import BenefitsSection from '../components/benefitsSection';
 import Button from '../components/button';
 import Contact from '../components/contact';
 import Footer from '../components/footer';
+import Hero from '../components/hero';
 import SectionContainer from '../components/section-container';
 import WhatIsOutstandingly from '../components/whatIsOutstandingly';
 
@@ -27,11 +28,17 @@ export default function ComponentsPage() {
         </ul>
       </SectionContainer>
       {/* the benefits section */}
+      <Hero />
       <BenefitsSection />
       <WhatIsOutstandingly />
       <Contact />
       <Button />
+<<<<<<< HEAD
       <Footer />
+=======
+      
+
+>>>>>>> d3d29232296061bbbbbcc7c646c438177b6b6ac6
     </>
   );
 }
