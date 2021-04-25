@@ -3,19 +3,16 @@ import styled from 'styled-components';
 
 const StyledButton = styled.span`
   background: #fe6192;
-  color: white;
+  color: var(--black);
   border: none;
-  border-radius: 1px;
-  padding: 0.5rem;
-  font-size: 0.5rem;
-  height: 2rem;
+  border-radius: 5px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
   text-align: center;
-  font-weight: bold;
+  font-weight: 200;
 
   &:hover {
     background: #f2e088;
-    color: #fe6192;
-    font-weight: bold;
   }
 `;
 
