@@ -4,12 +4,19 @@ import Button from './button';
 import styled from 'styled-components';
 
 const StyledForm = styled.form`
+  display: flex;
+  justify-content: space-evenly;
   input {
+    background: none;
+    width: 75%;
     color: var(--white);
-    background: transparent;
     border: none;
     border-bottom: 1px solid var(--white);
-    margin-right: 10px;
+    font-size: 0.75rem;
+    font-style: oblique;
+  }
+  .submit-btn {
+    align-self: left;
   }
 `;
 
@@ -35,7 +42,12 @@ export default function FormSubscribe() {
           onChange={formik.handleChange}
           value={formik.values.email}
         />
-        <Button type="submit" role="button" text="SUBMIT" />
+        <Button
+          className="submit-btn"
+          type="submit"
+          role="button"
+          text="SUBMIT"
+        />
       </StyledForm>
     </>
   );
