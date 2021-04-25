@@ -33,12 +33,7 @@ export default function ComponentsPage() {
       <WhatIsOutstandingly />
       <Contact />
       <Button />
-<<<<<<< HEAD
       <Footer />
-=======
-      
-
->>>>>>> d3d29232296061bbbbbcc7c646c438177b6b6ac6
     </>
   );
 }

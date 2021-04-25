@@ -12,15 +12,18 @@ const StyledFooter = styled.footer`
   align-items: center;
   gap: 1rem;
 
-  .title {
-    font-size: 2rem;
-    text-align: left;
+  .subscribe-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
 
-    .text-wrapper {
-      display: flex;
-      flex-direction: column;
-      span {
-        text-align: left;
+    .heading-text {
+      font-size: 2rem;
+      text-align: left;
+
+      p {
+        margin: -1.5rem 0;
+        padding: 0;
       }
     }
   }
@@ -31,15 +34,15 @@ export default function Footer() {
     <SectionContainer background="var(--black)">
       <StyledFooter>
         <p>MENU</p>
-        <div className="title">
-          <span className="text-wrapper">
-            <span>STAY</span>
-            <span>CONNECTED</span>
-          </span>
-        </div>
         <div className="subscribe-form">
-          <span>Subscribe to the latest updates from Outstandingly</span>
-          <FormSubscribe />
+          <div className="heading-text">
+            <p>STAY</p>
+            <p>CONNECTED</p>
+          </div>
+          <div className="form-wrapper">
+            <p>Subscribe to the latest updates from Outstandingly</p>
+            <FormSubscribe />
+          </div>
         </div>
       </StyledFooter>
     </SectionContainer>
