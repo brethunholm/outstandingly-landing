@@ -1,18 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import SectionContainer from './section-container';
+import Button from './button';
+import { useFormik } from 'formik';
 
 const StyledContact = styled.div`
-background: #1D1D1D;
+background: var(--black);
 width: 100vw;
-height: 500px;
+padding-bottom: 2rem;
 display: grid;
 justify-items: center;
 grid-template-areas: 
 'title'
 'form';
 .title {
-    color: white;
     grid-area: title;
     color: rgba(255, 255, 255, 0.75)
 }
@@ -28,8 +29,8 @@ grid-template-areas:
     justify-items: center;
     margin-bottom: 2rem;
     border: none;
+}  
 
-}
 input {
     background: none;
     color: white;
@@ -40,31 +41,51 @@ input {
     font-style: oblique;
 }
 
-
-.cta {
-    background: #FE6192;
-    color: white;
-    border: none;
-    font-size: 0.5rem;
-    height: 2rem;
-}
-
-
-
 `;
 
 
 export default function Contact() {
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            email: '',
+            message: '',
+        },
+        onSubmit: () => {
+          console.log('Form submitted...');
+          //add email address to email subscription service.
+        },
+      });
     return (
         <SectionContainer>
         <StyledContact>
             <h1 className="title">CONTACT US</h1>
             <form className="form">
-                <input type="text" name="name" placeholder="Name" />
-                <input type="text" name="message" placeholder="Email" />
-                <input type="text" name="email" placeholder="Message" />
+                <input type="text" 
+                name="name" 
+                id="name"
+                onChange={formik.handleChange}
+                value={formik.values.name}
+                placeholder="Name" 
+                />
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                    onChange={formik.handleChange}
+                    value={formik.values.email}
+                    />
+                  <input
+                    type="text"
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                    onChange={formik.handleChange}
+                    value={formik.values.message}
+                    />
             </form>
-            <button className="cta"> Send Message </button>
+           <Button type="submit" text="˖ SEND MESSAGE"/>
 
         </StyledContact>
         </SectionContainer>
