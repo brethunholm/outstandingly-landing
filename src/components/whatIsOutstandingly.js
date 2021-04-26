@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from './button';
+import SectionContainer from './section-container';
 
 const StyledCard = styled.div`
     display:grid;
@@ -47,6 +48,14 @@ const StyledCard = styled.div`
     }
 
 
+    .cta {
+    background: #FE6192;
+    color: white;
+    border: none;
+    font-size: 0.5rem;
+    height: 2rem;
+}
+
 
     @media (max-width: 900px) {
         display: grid;
@@ -68,6 +77,7 @@ const StyledCard = styled.div`
 
 export default function WhatIsOutstandingly() {
     return (
+        <SectionContainer>
         <StyledCard>
             <div className="title">
             <h1>What is <span className="highlight">Outstandingly?</span></h1>
@@ -79,5 +89,6 @@ export default function WhatIsOutstandingly() {
            </div>
             
         </StyledCard>
+        </SectionContainer>
     )
 }

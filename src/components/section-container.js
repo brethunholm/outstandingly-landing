@@ -3,11 +3,15 @@ import styled from 'styled-components';
 
 const StyledSection = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: ${props => props.flex || 'row'};
   position: relative;
   margin: 0 auto;
+
   padding: 2rem ${props => props.padding || '0'};
   width: 100%;
+
   background: ${props => props.background || 'var(--white)'};
 `;
 
