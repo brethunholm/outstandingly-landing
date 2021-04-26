@@ -44,17 +44,8 @@ const StyledCard = styled.div`
         justify-items: center;
         align-items: center;
         text-align: center;
-        overflow: scroll;
+        
     }
-
-
-    .cta {
-    background: #FE6192;
-    color: white;
-    border: none;
-    font-size: 0.5rem;
-    height: 2rem;
-}
 
 
     @media (max-width: 900px) {
@@ -67,6 +58,10 @@ const StyledCard = styled.div`
       
       .vl {
           display: none;
+      }
+
+      .content {
+        overflow: scroll;
       }
 
 
@@ -85,7 +80,7 @@ export default function WhatIsOutstandingly() {
             <div className="vl"></div>
            <div className="content">
            <p>What is our purpose? We want to provide a next step to new developers that want to gain the experience required to get the dream job. We strive to provide a productive, accessible, collaborative work environment for new / developing developers. Collaborative project based cohorts work together to create high quality portfolio projects, gain real word experience working in a development team environment while building a career network.</p>
-           <Button />
+           <Button text="˖ LEARN MORE" />
            </div>
             
         </StyledCard>
