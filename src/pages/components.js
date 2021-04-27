@@ -7,6 +7,7 @@ import MembersCard from '../components/MembersCard';
 import Hero from '../components/hero';
 import SectionContainer from '../components/section-container';
 import WhatIsOutstandingly from '../components/whatIsOutstandingly';
+import AboutUs from '../components/aboutUs';
 
 export default function ComponentsPage() {
   return (
@@ -32,7 +33,8 @@ export default function ComponentsPage() {
       {/* the benefits section */}
       <BenefitsSection />
       {/* member card test */}
-      <MembersCard />
+      {/* <MembersCard /> */}
+      <AboutUs />
       <WhatIsOutstandingly />
       <Contact />
       <SectionContainer>
