@@ -7,6 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import BenefitsCard from './BenefitsCard';
 import SectionContainer from './section-container';
+
 const StyledBenefits = styled.div`
   /* max-width: 640px;
     justify-items:  center;
@@ -24,7 +25,7 @@ const StyledBenefits = styled.div`
 `;
 
 export default function BenefitsSection() {
-  const benniesCards = bennies.map(card => (
+  const benniesCards = bennies.map((card) => (
     <BenefitsCard
       id={card.id}
       title={card.title}
