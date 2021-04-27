@@ -1,28 +1,50 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledButton = styled.span`
-  .bnt {
-    background: #FE6192;
-    color: white;
-    border: none;
-    border-radius: 1px;
-    padding: 0.5rem;
-    font-size: .5rem;
-    height: 2rem;
-    text-align: center;
-    font-weight: bold;
+const StyledButton = styled.button`
+  position: relative;
+  background: #fe6192;
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: 200;
+  cursor: pointer;
+  overflow: hidden;
+
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    background: #f2e088;
   }
-  .bnt:hover {
-    background: #F2E088;
-    color: #FE6192;
-    font-weight: bold;
+
+  &:after {
+    content: '';
+    background: var(--white);
+    display: block;
+    position: absolute;
+    padding-top: 200%;
+    padding-left: 200%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  &:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
   }
 `;
 
-export default function Button() {
-  return <StyledButton>
-    <button class="bnt">BUTTON TEXT</button>
-    
-    </StyledButton>;
+export default function Button(props) {
+  return (
+    <StyledButton type={props.type} role="button">
+      {props.text}
+    </StyledButton>
+  );
 }
