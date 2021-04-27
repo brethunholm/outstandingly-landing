@@ -18,14 +18,14 @@ export default function MembersCard({ name, img, about }) {
   return (
     <MembersStyled>
       <StaticImage
-        src="../images/lukeGlitchHeadshot.jpeg"
-        alt="luke, the legend"
-        placeholder="blurred"
-        layout="fixed"
+        src='../images/lukeGlitchHeadshot.jpeg'
+        alt='luke, the legend'
+        placeholder='blurred'
+        layout='fixed'
         width={350}
         height={300}
       />
-      <div className="content">
+      <div className='content'>
         <h3>{name}</h3>
         <p>{about}</p>
       </div>
