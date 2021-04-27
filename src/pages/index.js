@@ -1,6 +1,6 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 
 const StyledComingSoon = styled.div`
@@ -27,9 +27,10 @@ export default function ComingSoon({ data }) {
     <StyledComingSoon>
       <GatsbyImage
         image={data.logo.childImageSharp.gatsbyImageData}
-        alt="Outstandingly Logo"
+        alt='Outstandingly Logo'
       />
       <h1>Outstandingly</h1>
+      <Link to='/components'>.</Link>
     </StyledComingSoon>
   );
 }
