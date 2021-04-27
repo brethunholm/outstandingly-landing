@@ -2,5 +2,5 @@
   from = "/"
   to = "/coming-soon"
   status = 200
-  force = true
+  force = false
   headers = {X-From = "Netlify"}
