@@ -1,20 +1,50 @@
-import * as React from 'react';
-import Header from '../components/header';
+import React from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import Button from '../components/button';
-// import BenefitsSection from '../components/benefitsSection';
 
+const StyledComingSoon = styled.div`
+  display: flex;
+  height: 100vh;
+  overflow-y: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
 
-const StyledIndex = styled.div`
-  position: relative;
+  h1 {
+    color: var(--white-darker);
+    font-weight: 200;
+  }
+
+  img {
+    max-width: 200px;
+  }
 `;
-const IndexPage = () => (
-  <StyledIndex>
-    <Header />
-    <Link to="/components">Components</Link>
-    <Button />
-  </StyledIndex>
-);
 
-export default IndexPage;
+export default function ComingSoon({ data }) {
+  return (
+    <StyledComingSoon>
+      <GatsbyImage
+        image={data.logo.childImageSharp.gatsbyImageData}
+        alt="Outstandingly Logo"
+      />
+      <h1>Outstandingly</h1>
+    </StyledComingSoon>
+  );
+}
+
+export const data = graphql`
+  query {
+    logo: file(relativePath: { eq: "logo_200.png" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(
+          width: 200
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, PNG]
+        )
+      }
+    }
+  }
+`;
