@@ -24,7 +24,7 @@ const StyledCard = styled.div`
     text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
   .highlight {
-    color: var(--bnt-accent);
+    color: var(--accent-light);
   }
 
   .vl {
