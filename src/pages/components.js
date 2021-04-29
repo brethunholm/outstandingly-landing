@@ -14,7 +14,7 @@ export default function ComponentsPage() {
     <>
       <h1>A collection of our components and a place to test them out!</h1>
       <h2>section-container</h2>
-      <SectionContainer padding="2rem" background="#ababab" flex="column">
+      <SectionContainer padding='2rem' background='#ababab' flex='column'>
         <p>This is a section container</p>
         <p>Props:</p>
         <ul>
@@ -38,7 +38,7 @@ export default function ComponentsPage() {
       <WhatIsOutstandingly />
       <Contact />
       <SectionContainer>
-        <Button text="This is a button" />
+        <Button text='This is a button' />
       </SectionContainer>
       <Footer />
     </>

@@ -1,10 +1,9 @@
 import * as React from 'react';
-import Header from '../components/header';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import Header from '../components/header';
 import Button from '../components/button';
 // import BenefitsSection from '../components/benefitsSection';
-
 
 const StyledIndex = styled.div`
   position: relative;
@@ -12,7 +11,7 @@ const StyledIndex = styled.div`
 const IndexPage = () => (
   <StyledIndex>
     <Header />
-    <Link to="/components">Components</Link>
+    <Link to='/components'>Components</Link>
     <Button />
   </StyledIndex>
 );
