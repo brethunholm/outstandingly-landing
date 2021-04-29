@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/"
   to = "/coming-soon"
-  status = 200
-  force = true
-  headers = {X-From = "Netlify"}
+  status = 301
+  force = false
+  query = {path = ":path"}

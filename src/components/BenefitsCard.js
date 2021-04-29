@@ -36,7 +36,7 @@ const StyledCard = styled.div`
   .icon {
     place-self: center;
     font-size: 1.8rem;
-    color: #4ed5ee;
+    color: var(--accent-dark);
   }
 `;
 export default function BenefitsCard({ title, icon, content }) {
