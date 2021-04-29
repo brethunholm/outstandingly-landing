@@ -6,7 +6,12 @@ import SectionContainer from './section-container';
 const StyledCard = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #6f43d6;
+  /* background: var(--accent-dark); */
+  background-image: linear-gradient(
+    to bottom right,
+    var(--accent-light),
+    var(--accent-dark)
+  );
   color: var(--white);
   padding: 2rem;
   gap: 1rem;
@@ -19,11 +24,11 @@ const StyledCard = styled.div`
     grid-area: title;
   }
   .highlight {
-    color: #4ed5ee;
+    color: var(--accent-light);
   }
 
   .vl {
-    border-left: 5px solid #4ed5ee;
+    border-left: 5px solid var(--accent-light);
     height: 60%;
     position: absolute;
     left: 50%;

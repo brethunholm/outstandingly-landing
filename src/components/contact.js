@@ -4,7 +4,8 @@ import { useFormik } from 'formik';
 import Button from './button';
 
 const StyledContact = styled.div`
-  background: var(--black);
+  /* background: var(--black); */
+  background-image: linear-gradient(to bottom right, var(--black), #404040);
   width: 100vw;
   padding: 3rem;
   display: grid;
