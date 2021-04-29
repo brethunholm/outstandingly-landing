@@ -10,10 +10,13 @@ const StyledHero = styled.div`
     display: grid;
     justify-content: center;
     align-items: center;
-    background: var(--black);
-    color: #f2f2f2;
+    background: var(--light-grey);
+    color: #fe6192;
     padding: 4rem;
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
+    /* text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+      0px -4px 10px rgba(255, 255, 255, 0.3); */
+    /* text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5); */
   }
 
   h1 {
@@ -24,7 +27,6 @@ const StyledHero = styled.div`
 
   .hero-content {
     display: grid;
-    /* width: 100vw; */
     justify-content: center;
     grid-template-columns: 1fr;
   }
@@ -32,89 +34,8 @@ const StyledHero = styled.div`
   .top-span {
     justify-self: center;
     font-size: 1.3rem;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6);
   }
-
-  hr {
-    height: 1px;
-    /* margin: 50px 0; */
-    background: -webkit-gradient(
-      linear,
-      0 0,
-      100% 0,
-      from(rgba(0, 0, 0, 0)),
-      color-stop(0.5, #333333),
-      to(rgba(0, 0, 0, 0))
-    );
-    background: -webkit-linear-gradient(
-      left,
-      rgba(0, 0, 0, 0),
-      #333333,
-      rgba(0, 0, 0, 0)
-    );
-    background: -moz-linear-gradient(
-      left,
-      rgba(0, 0, 0, 0),
-      #333333,
-      rgba(0, 0, 0, 0)
-    );
-    background: -o-linear-gradient(
-      left,
-      rgba(0, 0, 0, 0),
-      #333333,
-      rgba(0, 0, 0, 0)
-    );
-    background: linear-gradient(
-      left,
-      rgba(0, 0, 0, 0),
-      #333333,
-      rgba(0, 0, 0, 0)
-    );
-    border: 0;
-  }
-  hr:after {
-    display: block;
-    content: '';
-    height: 30px;
-    background-image: -webkit-gradient(
-      radial,
-      50% 0%,
-      0,
-      50% 0%,
-      116,
-      color-stop(0%, #cccccc),
-      color-stop(100%, rgba(255, 255, 255, 0))
-    );
-    background-image: -webkit-radial-gradient(
-      center top,
-      farthest-side,
-      #cccccc 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background-image: -moz-radial-gradient(
-      center top,
-      farthest-side,
-      #cccccc 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background-image: -o-radial-gradient(
-      center top,
-      farthest-side,
-      #cccccc 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background-image: radial-gradient(
-      farthest-side at center top,
-      #cccccc 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
-
-  /* @media (max-width: 900px) {
-    .hero-bg {
-      display: none;
-    }
-    background: #259fcb;
-  } */
 `;
 
 function Hero() {

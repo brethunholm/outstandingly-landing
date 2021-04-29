@@ -22,6 +22,7 @@ const StyledCard = styled.div`
     justify-content: center;
     align-items: center;
     grid-area: title;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
   .highlight {
     color: var(--accent-light);

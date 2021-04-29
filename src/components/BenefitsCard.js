@@ -8,6 +8,7 @@ const StyledCard = styled.div`
   border: 1px solid var(--white-darker);
   box-shadow: var(--card-shadow);
   border-radius: 5px;
+  background-color: var(--white-darker);
   display: grid;
   grid-template-rows: 1fr 0.75fr 2.25fr;
   justify-items: center;
@@ -42,7 +43,7 @@ const StyledCard = styled.div`
 export default function BenefitsCard({ title, icon, content }) {
   return (
     <StyledCard>
-      <FontAwesomeIcon className='icon' icon={icon} />
+      <FontAwesomeIcon className="icon" icon={icon} />
       <h5>{title}</h5>
       <p>{content}</p>
     </StyledCard>
