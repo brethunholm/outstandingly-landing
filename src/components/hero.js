@@ -1,18 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-// import VideoBg from 'reactjs-videobg';
-// import Cover from '../videos/blue-liquid.mp4';
 import BackgroundImage from 'gatsby-background-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const StyledHero = styled.div`
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  background: var(--black);
-  color: var(--white);
-  padding: 4rem;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  .bg {
+    width: 100vw;
+    height: 60vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: var(--black);
+    color: var(--white);
+    padding: 4rem;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
+  }
 
   h1 {
     font-size: 5rem;
@@ -22,6 +24,7 @@ const StyledHero = styled.div`
 
   .hero-content {
     display: grid;
+    /* width: 100vw; */
     justify-content: center;
     grid-template-columns: 1fr;
   }
@@ -105,10 +108,6 @@ const StyledHero = styled.div`
       rgba(255, 255, 255, 0) 100%
     );
   }
-  .bg {
-    background-size: cover;
-    width: 2000px;
-  }
 
   /* @media (max-width: 900px) {
     .hero-bg {
@@ -121,7 +120,7 @@ const StyledHero = styled.div`
 function Hero() {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { regex: "/green/" }) {
+      file(relativePath: { eq: "background.jpg" }) {
         id
         childImageSharp {
           fluid {
@@ -139,13 +138,9 @@ function Hero() {
         <div className="hero-content">
           <span className="top-span">SOMETHING SOMETHING</span>
           <h1>OUTSTANDINGLY</h1>
-          <hr />
+          {/* <hr /> */}
         </div>
       </BackgroundImage>
-
-      {/* <VideoBg videoClass="hero-bg" loop>
-        <VideoBg.Source src={Cover} type="video/mp4" />
-      </VideoBg> */}
     </StyledHero>
   );
 }
