@@ -105,19 +105,20 @@ const StyledHero = styled.div`
       rgba(255, 255, 255, 0) 100%
     );
   }
-  .hero-bg {
-    position: fixed;
+  .bg {
+    background-size: cover;
+    width: 2000px;
   }
 
-  @media (max-width: 900px) {
+  /* @media (max-width: 900px) {
     .hero-bg {
       display: none;
     }
     background: #259fcb;
-  }
+  } */
 `;
 
-function Hero(props) {
+function Hero() {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { regex: "/green/" }) {
@@ -134,7 +135,7 @@ function Hero(props) {
 
   return (
     <StyledHero>
-      <BackgroundImage fluid={data.file.childImageSharp.fluid}>
+      <BackgroundImage className="bg" fluid={data.file.childImageSharp.fluid}>
         <div className="hero-content">
           <span className="top-span">SOMETHING SOMETHING</span>
           <h1>OUTSTANDINGLY</h1>
