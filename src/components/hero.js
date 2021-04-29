@@ -11,7 +11,7 @@ const StyledHero = styled.div`
     justify-content: center;
     align-items: center;
     background: var(--light-grey);
-    color: #fe6192;
+    color: var(--white);
     padding: 4rem;
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
     /* text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
