@@ -6,7 +6,6 @@ import SectionContainer from './section-container';
 const StyledCard = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* background: var(--accent-dark); */
   background-image: linear-gradient(
     to bottom right,
     var(--accent-light),
