@@ -6095,7 +6095,7 @@
   "resolved" "https://registry.npmjs.org/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz"
   "version" "1.0.1"
 
-"gatsby-background-image@^1.5.3":
+"gatsby-background-image@^1.4.1", "gatsby-background-image@^1.5.3":
   "integrity" "sha512-mELRONXu4QpNJQ8rKqFmqRKO1l7I/xDWCPEjzf4qg6epWisr7QTrBL3mYFdl7+CUjV7Lw2xSXy26JsLw8vbI5w=="
   "resolved" "https://registry.npmjs.org/gatsby-background-image/-/gatsby-background-image-1.5.3.tgz"
   "version" "1.5.3"
@@ -6217,7 +6217,7 @@
     "lodash" "^4.17.21"
     "webpack-assets-manifest" "^5.0.1"
 
-"gatsby-plugin-image@^1.2.1":
+"gatsby-plugin-image@^1.0.1", "gatsby-plugin-image@^1.2.1":
   "integrity" "sha512-XXIxZdcqlI31hHd55Ba7TrXbzkYT+no3X+VOek1lTMjEuTQDnLwrpCgCBFwp/YgYNgPRV7b3QnHpjmc7sUY+Wg=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-image/-/gatsby-plugin-image-1.2.1.tgz"
   "version" "1.2.1"
@@ -6634,6 +6634,11 @@
     "string-width" "^1.0.1"
     "strip-ansi" "^3.0.1"
     "wide-align" "^1.1.0"
+
+"gbimage-bridge@^0.1.4":
+  "integrity" "sha512-Q/AS8DQ0vav2eNYYZKAtf7ROQhfZ3/uwT6y5yc/K+nhNkpbB9foizuCaAQh7op/lfoxRaIqe2iNl1gf2EnlwGg=="
+  "resolved" "https://registry.npmjs.org/gbimage-bridge/-/gbimage-bridge-0.1.4.tgz"
+  "version" "0.1.4"
 
 "gensync@^1.0.0-beta.1", "gensync@^1.0.0-beta.2":
   "integrity" "sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg=="
@@ -11098,7 +11103,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@^16.9.0 || ^17.0.0", "react-dom@^17.0.1", "react-dom@>= 16.8.0", "react-dom@>=16.x":
+"react-dom@^16.14.0 || ^17.0.0", "react-dom@^16.9.0 || ^17.0.0", "react-dom@^17.0.1", "react-dom@>= 16.8.0", "react-dom@>=16.x":
   "integrity" "sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.1.tgz"
   "version" "17.0.1"
@@ -11157,7 +11162,7 @@
   "resolved" "https://registry.npmjs.org/react-typography/-/react-typography-0.16.19.tgz"
   "version" "0.16.19"
 
-"react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^16.9.0 || ^17.0.0", "react@^17.0.1", "react@>= 16.8.0", "react@>=16.8.0", "react@>=16.x":
+"react@^0.14.0 || ^15.0.0 || ^16.0.0", "react@^16.14.0 || ^17.0.0", "react@^16.9.0 || ^17.0.0", "react@^17.0.1", "react@>= 16.8.0", "react@>=16.8.0", "react@>=16.x":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
   "version" "17.0.1"
