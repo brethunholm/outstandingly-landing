@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import VideoBg from 'reactjs-videobg';
-import Cover from '../videos/blue-liquid.mp4';
+// import VideoBg from 'reactjs-videobg';
+// import Cover from '../videos/blue-liquid.mp4';
+import BackgroundImage from 'gatsby-background-image';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const StyledHero = styled.div`
   display: grid;
   justify-content: center;
   align-items: center;
-  background: transparent;
+  background: var(--black);
   color: var(--white);
   padding: 4rem;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
@@ -115,18 +117,36 @@ const StyledHero = styled.div`
   }
 `;
 
-export default function Hero() {
+function Hero(props) {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { regex: "/green/" }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+  console.log('hero', data);
+
   return (
     <StyledHero>
-      <div className="hero-content">
-        <span className="top-span">SOMETHING SOMETHING</span>
-        <h1>OUTSTANDINGLY</h1>
-        <hr />
-      </div>
+      <BackgroundImage fluid={data.file.childImageSharp.fluid}>
+        <div className="hero-content">
+          <span className="top-span">SOMETHING SOMETHING</span>
+          <h1>OUTSTANDINGLY</h1>
+          <hr />
+        </div>
+      </BackgroundImage>
 
-      <VideoBg videoClass="hero-bg" loop>
+      {/* <VideoBg videoClass="hero-bg" loop>
         <VideoBg.Source src={Cover} type="video/mp4" />
-      </VideoBg>
+      </VideoBg> */}
     </StyledHero>
   );
 }
+
+export default Hero;
