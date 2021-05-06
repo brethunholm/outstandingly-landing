@@ -12,6 +12,8 @@ export const GlobalStyle = createGlobalStyle`
   --grey: #737373;
   --accent-light: #41FFE0;
   --accent-dark: #0544C8;
+  --btn-primary: #fd6192;
+  --btn-primary-darker: #f53c76;
   --bnt-accent: #fe6192;
   --card-shadow: 1px 1px 8px #bbb;
 }
