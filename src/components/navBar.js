@@ -37,7 +37,7 @@ const NavStyles = styled.div`
 
   .nav-item:first-child {
     margin-right: auto;
-    margin-left: 1.5rem;
+    margin-left: 1.3rem;
   }
 `;
 
