@@ -26,7 +26,7 @@ export default function aboutUs() {
     />
   ));
   return (
-    <SectionContainer flex="column">
+    <SectionContainer flex="column" id="team">
       <h2>About us</h2>
       <AboutUsStyled>{theMembers}</AboutUsStyled>
     </SectionContainer>
