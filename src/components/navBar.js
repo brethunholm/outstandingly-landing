@@ -1,5 +1,4 @@
 import React from 'react';
-// import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import styled from 'styled-components';
 
@@ -63,7 +62,7 @@ export default function Nav() {
         </li>
         <li className="nav-item">
           <button type="button" onClick={() => scrollTo('#team')}>
-            Meet the Team
+            The Team
           </button>
         </li>
         <li className="nav-item">
