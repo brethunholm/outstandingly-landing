@@ -18,6 +18,12 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
     },
     {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        duration: 800,
+      },
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/styles/Typography`,
@@ -38,6 +44,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-fontawesome-css`
+    `gatsby-plugin-fontawesome-css`,
   ],
 };

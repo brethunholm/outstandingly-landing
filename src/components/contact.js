@@ -58,7 +58,7 @@ export default function Contact() {
     },
   });
   return (
-    <StyledContact>
+    <StyledContact id="contact">
       <h1 className="title">CONTACT US</h1>
       <form className="form">
         <input

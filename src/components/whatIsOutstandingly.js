@@ -66,7 +66,7 @@ const StyledCard = styled.div`
 export default function WhatIsOutstandingly() {
   return (
     <SectionContainer>
-      <StyledCard>
+      <StyledCard id="whatIs">
         <div className="title">
           <h1>
             What is <span className="highlight">Outstandingly?</span>
