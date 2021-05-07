@@ -1,6 +1,5 @@
 import React from 'react';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
-// import { Link } from 'gatsby';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import styled from 'styled-components';
 
 const NavStyles = styled.div`
@@ -20,21 +19,25 @@ const NavStyles = styled.div`
 
   .nav-item {
     list-style: none;
-    margin-right: 2rem;
+    margin-right: 0.75rem;
   }
 
-  .nav-item span {
+  .nav-item button {
+    border: none;
+    background: none;
     color: var(--white);
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    font-size: 0.75rem;
   }
 
-  .nav-item span:hover {
+  .nav-item button:hover {
     color: #fe6192;
     transition: all 200ms ease-in;
   }
 
   .nav-item:first-child {
     margin-right: auto;
-    margin-left: 2rem;
+    margin-left: 1.3rem;
   }
 `;
 
@@ -43,34 +46,34 @@ export default function Nav() {
     <NavStyles>
       <ul className="nav-list">
         <li className="nav-item">
-          <AnchorLink to="#" title="What is Outstandingly">
-            <span>🔥</span>
-          </AnchorLink>
+          <button type="button" onClick={() => scrollTo('#contact')}>
+            🔥
+          </button>
         </li>
         <li className="nav-item">
-          <AnchorLink to="#whatIs" title="What is Outstandingly">
-            <span>What is Outstandingly?</span>
-          </AnchorLink>
+          <button type="button" onClick={() => scrollTo('#whatIs')}>
+            What is Outstandingly?
+          </button>
         </li>
         <li className="nav-item">
-          <AnchorLink to="#benefits" title="What is Outstandingly">
-            <span>Benefits</span>
-          </AnchorLink>
+          <button type="button" onClick={() => scrollTo('#benefits')}>
+            Benefits
+          </button>
         </li>
         <li className="nav-item">
-          <AnchorLink to="#team" title="What is Outstandingly">
-            <span>Meet the team</span>
-          </AnchorLink>
+          <button type="button" onClick={() => scrollTo('#team')}>
+            The Team
+          </button>
         </li>
         <li className="nav-item">
-          <AnchorLink to="/#whatIs" title="What is Outstandingly">
-            <span>Projects</span>
-          </AnchorLink>
+          <button type="button" onClick={() => scrollTo('#benefits')}>
+            Projects
+          </button>
         </li>
         <li className="nav-item">
-          <AnchorLink to="#contact" title="What is Outstandingly">
-            <span>Contact Us</span>
-          </AnchorLink>
+          <button type="button" onClick={() => scrollTo('#contact')}>
+            Contact Us
+          </button>
         </li>
       </ul>
     </NavStyles>
