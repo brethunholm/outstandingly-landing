@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body{
   box-sizing: border-box;
+  overflow-x: hidden;
 }
   a{
     text-decoration: none;

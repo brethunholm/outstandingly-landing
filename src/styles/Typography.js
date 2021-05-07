@@ -1,5 +1,4 @@
 import Typography from 'typography';
-import lincolnTheme from 'typography-theme-lincoln';
 
 // const TypographyBase = new Typography(lincolnTheme);
 const TypographyBase = new Typography({
