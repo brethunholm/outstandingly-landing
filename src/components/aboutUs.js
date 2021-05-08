@@ -1,22 +1,89 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import MembersCard from './MembersCard';
 import SectionContainer from './section-container';
 
 const AboutUsStyled = styled.div`
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 300px 300px;
-  /* repeat(auto-fit, minmax(240px, 1fr)); */
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   h1 {
-    background-color: white;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  @media (min-width: 973px) and (max-width: 1294px) {
+    .team {
+      max-width: 800px;
+    }
   }
 `;
 export default function aboutUs() {
+  const teamImages = useStaticQuery(graphql`
+    query {
+      bre: file(relativePath: { regex: "/bre/i" }) {
+        id
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+      luke: file(relativePath: { regex: "/luke/i" }) {
+        id
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+      patty: file(relativePath: { regex: "/patty/i" }) {
+        id
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+      andrew: file(relativePath: { regex: "/andrew/i" }) {
+        id
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+    }
+  `);
+
+  const members = [
+    {
+      name: 'Luke Gartland',
+      img: teamImages.luke.childImageSharp.gatsbyImageData,
+      about: 'Luke enjoys sailing, kitesurfing and coding.',
+      key: 1,
+    },
+    {
+      name: 'Bre Thunholm',
+      img: teamImages.bre.childImageSharp.gatsbyImageData,
+      about: 'Is pretty and a coding super star.',
+      key: 2,
+    },
+    {
+      name: 'Patrick Franz',
+      img: teamImages.patty.childImageSharp.gatsbyImageData,
+      about: 'Has a dog named salty.',
+      key: 3,
+    },
+    {
+      name: 'Andrew ???',
+      img: teamImages.andrew.childImageSharp.gatsbyImageData,
+      about: 'Enjoys a good suit.',
+      key: 4,
+    },
+  ];
+
   const theMembers = members.map((member) => (
     <MembersCard
       key={member.key}
@@ -26,36 +93,11 @@ export default function aboutUs() {
     />
   ));
   return (
-    <SectionContainer flex="column" id="team">
-      <h2>About us</h2>
-      <AboutUsStyled>{theMembers}</AboutUsStyled>
+    <SectionContainer flex='column' id='team'>
+      <AboutUsStyled>
+        <h1>Meet the Team</h1>
+        <div className='team'>{theMembers}</div>
+      </AboutUsStyled>
     </SectionContainer>
   );
 }
-
-const members = [
-  {
-    name: 'Luke Gartland',
-    img: '../images/lukeGlitchHeadshot.jpeg',
-    about: 'Luke enjoys sailing, kitesurfing and coding.',
-    key: 1,
-  },
-  {
-    name: 'Bre Thunholm',
-    img: '../images/lukeGlitchHeadshot.jpeg',
-    about: 'Is supper pretty and a coding suer star.',
-    key: 2,
-  },
-  {
-    name: 'Patrick Franz',
-    img: '../images/lukeGlitchHeadshot.jpeg',
-    about: 'Has a dog named salty.',
-    key: 3,
-  },
-  {
-    name: 'Andrew ???',
-    img: '../images/lukeGlitchHeadshot.jpeg',
-    about: 'Enjoys a good suit.',
-    key: 4,
-  },
-];
