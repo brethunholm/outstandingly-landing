@@ -23,12 +23,14 @@ const StyledHero = styled.div`
     font-size: 5rem;
     padding: 0.3rem;
     font-weight: bold;
+    font-family: 'Roboto', Sans-Serif;
   }
 
   .hero-content {
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr;
+    font-family: 'Roboto', Sans-Serif;
   }
 
   .top-span {
@@ -55,9 +57,9 @@ function Hero() {
 
   return (
     <StyledHero>
-      <BackgroundImage className='bg' fluid={data.file.childImageSharp.fluid}>
-        <div className='hero-content'>
-          <span className='top-span'>DO SOMETHING</span>
+      <BackgroundImage className="bg" fluid={data.file.childImageSharp.fluid}>
+        <div className="hero-content">
+          <span className="top-span">DO SOMETHING</span>
           <h1>OUTSTANDINGLY</h1>
           {/* <hr /> */}
         </div>
