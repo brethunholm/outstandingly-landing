@@ -32,7 +32,6 @@ const MembersStyled = styled.div`
     height: 450px;
     width: 350px;
   } */
-
   @media (min-width: 1700px) {
     .gatsby-image-wrapper {
       height: 400px;
