@@ -6,7 +6,6 @@ import SectionContainer from './section-container';
 const StyledCard = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* background: var(--accent-dark); */
   background-image: linear-gradient(
     to bottom right,
     var(--accent-light),
@@ -22,6 +21,7 @@ const StyledCard = styled.div`
     justify-content: center;
     align-items: center;
     grid-area: title;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
   .highlight {
     color: var(--accent-light);
@@ -66,7 +66,7 @@ const StyledCard = styled.div`
 export default function WhatIsOutstandingly() {
   return (
     <SectionContainer>
-      <StyledCard>
+      <StyledCard id="whatIs">
         <div className="title">
           <h1>
             What is <span className="highlight">Outstandingly?</span>

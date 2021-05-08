@@ -8,13 +8,14 @@ import Hero from '../components/hero';
 import SectionContainer from '../components/section-container';
 import WhatIsOutstandingly from '../components/whatIsOutstandingly';
 import AboutUs from '../components/aboutUs';
+import Nav from '../components/navBar';
 
 export default function ComponentsPage() {
   return (
     <>
       <h1>A collection of our components and a place to test them out!</h1>
       <h2>section-container</h2>
-      <SectionContainer padding='2rem' background='#ababab' flex='column'>
+      <SectionContainer padding="2rem" background="#ababab" flex="column">
         <p>This is a section container</p>
         <p>Props:</p>
         <ul>
@@ -29,6 +30,7 @@ export default function ComponentsPage() {
           </li>
         </ul>
       </SectionContainer>
+      <Nav />
       <Hero />
       {/* the benefits section */}
       <BenefitsSection />
@@ -38,7 +40,7 @@ export default function ComponentsPage() {
       <WhatIsOutstandingly />
       <Contact />
       <SectionContainer>
-        <Button text='This is a button' />
+        <Button text="This is a button" />
       </SectionContainer>
       <Footer />
     </>

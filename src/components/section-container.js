@@ -9,7 +9,7 @@ const StyledSection = styled.div`
   position: relative;
   margin: 0 auto;
 
-  padding: 2rem ${(props) => props.padding || '0'};
+  padding: 2rem ${(props) => props.padding || '5px'};
   width: 100%;
 
   background: ${(props) => props.background || 'var(--white)'};
@@ -19,5 +19,6 @@ const StyledSection = styled.div`
 //   padding: padding left and right  (optional)
 //   background: background color (optional)
 export default function SectionContainer(props) {
+  console.log(`section container props:`, props);
   return <StyledSection {...props}>{props.children}</StyledSection>;
 }

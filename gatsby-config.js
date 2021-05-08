@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -16,6 +17,12 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-styled-components`,
+    },
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        duration: 800,
+      },
     },
     {
       resolve: `gatsby-plugin-typography`,
@@ -38,6 +45,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-fontawesome-css`
+    `gatsby-plugin-fontawesome-css`,
   ],
 };

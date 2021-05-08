@@ -34,7 +34,7 @@ export default function BenefitsSection() {
     />
   ));
   return (
-    <SectionContainer background='var(--white-darker)'>
+    <SectionContainer background='#f1f2f6' id='benefits'>
       <StyledBenefits>{benniesCards}</StyledBenefits>
     </SectionContainer>
   );
