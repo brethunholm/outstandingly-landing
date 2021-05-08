@@ -11,6 +11,7 @@ const StyledCard = styled.div`
     var(--accent-light),
     var(--accent-dark)
   );
+  font-family: 'Roboto', Sans-Serif;
   color: var(--white);
   padding: 2rem;
   gap: 1rem;

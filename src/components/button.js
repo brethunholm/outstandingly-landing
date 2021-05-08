@@ -11,8 +11,8 @@ const StyledButton = styled.button`
   color: var(--white);
   border: none;
   border-radius: 2px;
-  padding: 1rem 1.25rem;
-  font-size: 1rem;
+  padding: .75rem 1rem;
+  font-size: 0.75rem;
   text-align: center;
   font-weight: 200;
   cursor: pointer;
@@ -65,7 +65,7 @@ export default function Button({ type, text }) {
     });
   }, []);
   return (
-    <StyledButton ref={buttonRef} type={type} role='button'>
+    <StyledButton ref={buttonRef} type={type} role="button">
       {text}
     </StyledButton>
   );
