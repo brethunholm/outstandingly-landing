@@ -5,10 +5,10 @@ import styled from 'styled-components';
 const StyledCard = styled.div`
   height: 200px;
   width: 200px;
-  border: 1px solid var(--white-darker);
-  box-shadow: var(--card-shadow);
+  border: 1px solid var(--white);
+  /* box-shadow: var(--card-shadow); */
   border-radius: 5px;
-  background-color: var(--white-darker);
+  background-color: var(--white);
   display: grid;
   grid-template-rows: 1fr 0.75fr 2.25fr;
   justify-items: center;
@@ -17,9 +17,8 @@ const StyledCard = styled.div`
   font-style: italic;
   transition: 250ms ease-in-out;
   &:hover {
-    transform: scale(1.05);
-    box-shadow: 5px 5px 15px #777;
-    cursor: pointer;
+    /* transform: scale(1.01); */
+    box-shadow: var(--card-shadow);
   }
 
   p {
@@ -43,7 +42,7 @@ const StyledCard = styled.div`
 export default function BenefitsCard({ title, icon, content }) {
   return (
     <StyledCard>
-      <FontAwesomeIcon className="icon" icon={icon} />
+      <FontAwesomeIcon className='icon' icon={icon} />
       <h5>{title}</h5>
       <p>{content}</p>
     </StyledCard>

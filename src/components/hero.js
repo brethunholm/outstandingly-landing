@@ -55,9 +55,9 @@ function Hero() {
 
   return (
     <StyledHero>
-      <BackgroundImage className="bg" fluid={data.file.childImageSharp.fluid}>
-        <div className="hero-content">
-          <span className="top-span">SOMETHING SOMETHING</span>
+      <BackgroundImage className='bg' fluid={data.file.childImageSharp.fluid}>
+        <div className='hero-content'>
+          <span className='top-span'>DO SOMETHING</span>
           <h1>OUTSTANDINGLY</h1>
           {/* <hr /> */}
         </div>

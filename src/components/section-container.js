@@ -19,6 +19,6 @@ const StyledSection = styled.div`
 //   padding: padding left and right  (optional)
 //   background: background color (optional)
 export default function SectionContainer(props) {
-  console.log(props);
+  console.log(`section container props:`, props);
   return <StyledSection {...props}>{props.children}</StyledSection>;
 }
