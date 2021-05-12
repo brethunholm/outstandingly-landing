@@ -9,7 +9,7 @@ import SectionContainer from '../components/section-container';
 import WhatIsOutstandingly from '../components/whatIsOutstandingly';
 import AboutUs from '../components/aboutUs';
 import Nav from '../components/navBar';
-import Accordion from '../components/qAndA';
+import Accordion from '../components/faq';
 
 export default function ComponentsPage() {
   return (
