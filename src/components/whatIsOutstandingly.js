@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from './button';
-import SectionContainer from './section-container';
 
 const StyledCard = styled.div`
   display: grid;
@@ -66,27 +65,25 @@ const StyledCard = styled.div`
 
 export default function WhatIsOutstandingly() {
   return (
-    <SectionContainer>
-      <StyledCard id="whatIs">
-        <div className="title">
-          <h1>
-            What is <span className="highlight">Outstandingly?</span>
-          </h1>
-        </div>
-        <div className="vl" />
-        <div className="content">
-          <p>
-            What is our purpose? We want to provide a next step to new
-            developers that want to gain the experience required to get the
-            dream job. We strive to provide a productive, accessible,
-            collaborative work environment for new / developing developers.
-            Collaborative project based cohorts work together to create high
-            quality portfolio projects, gain real word experience working in a
-            development team environment while building a career network.
-          </p>
-          <Button text="˖ LEARN MORE" />
-        </div>
-      </StyledCard>
-    </SectionContainer>
+    <StyledCard id="whatIs">
+      <div className="title">
+        <h1>
+          What is <span className="highlight">Outstandingly?</span>
+        </h1>
+      </div>
+      <div className="vl" />
+      <div className="content">
+        <p>
+          What is our purpose? We want to provide a next step to new developers
+          that want to gain the experience required to get the dream job. We
+          strive to provide a productive, accessible, collaborative work
+          environment for new / developing developers. Collaborative project
+          based cohorts work together to create high quality portfolio projects,
+          gain real word experience working in a development team environment
+          while building a career network.
+        </p>
+        <Button text="˖ LEARN MORE" />
+      </div>
+    </StyledCard>
   );
 }

@@ -1,51 +1,24 @@
 import React from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import { graphql, Link } from 'gatsby';
-import styled from 'styled-components';
+import AboutUs from '../components/aboutUs';
+import BenefitsSection from '../components/benefitsSection';
+import Contact from '../components/contact';
+import FaqSection from '../components/faq';
+import Footer from '../components/footer';
+import Hero from '../components/hero';
+import Nav from '../components/navBar';
+import WhatIsOutstandingly from '../components/whatIsOutstandingly';
 
-const StyledComingSoon = styled.div`
-  display: flex;
-  height: 100vh;
-  overflow-y: hidden;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--black);
-
-  h1 {
-    color: var(--white-darker);
-    font-weight: 200;
-  }
-
-  img {
-    max-width: 200px;
-  }
-`;
-
-export default function ComingSoon({ data }) {
+export default function IndexPage() {
   return (
-    <StyledComingSoon>
-      <GatsbyImage
-        image={data.logo.childImageSharp.gatsbyImageData}
-        alt='Outstandingly Logo'
-      />
-      <h1>Outstandingly</h1>
-      <Link to='/components'>.</Link>
-    </StyledComingSoon>
+    <>
+      <Nav />
+      <Hero />
+      <BenefitsSection />
+      <WhatIsOutstandingly />
+      <AboutUs />
+      <Contact />
+      <FaqSection />
+      <Footer />
+    </>
   );
 }
-
-export const data = graphql`
-  query {
-    logo: file(relativePath: { eq: "logo_200.png" }) {
-      id
-      childImageSharp {
-        gatsbyImageData(
-          width: 200
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, PNG]
-        )
-      }
-    }
-  }
-`;
