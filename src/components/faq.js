@@ -33,7 +33,7 @@ const StyledSection = styled.div`
   }
 `;
 
-const questions = [
+const faqs = [
   {
     title:
       'What are the most important technical skills to have for a junior job position?',
