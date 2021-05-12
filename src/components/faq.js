@@ -1,82 +1,144 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Accordion from './Accordion';
+import arrow from '../images/down-arrow.svg';
 
 const StyledSection = styled.div`
   * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  /* Style the accordion section */
-  .accordion__section {
-    display: flex;
-    flex-direction: column;
+    box-sizing: border-box;
+    font-family: 'Roboto', Sans-Serif;
   }
 
-  /* Style the buttons that are used to open and close the accordion panel */
-  .accordion {
+  body {
     background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    display: flex;
-    align-items: center;
-    border: none;
-    outline: none;
-    transition: background-color 0.6s ease;
   }
-  .active {
+  header {
     display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+    background-color: #25a2d5;
+    border-bottom: 3px solid var(--accent-light);
+  }
+
+  header h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .faqs {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  .faqs .faq {
+    margin: 15px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .faqs .faq .faq-question {
+    position: relative;
+    font-size: 20px;
+    padding-right: 80px;
+
+    transition: all 0.4s ease;
+  }
+
+  .faqs .faq .faq-question::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+
+    background-image: url(${arrow});
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    transition: all 0.4s ease-out;
+  }
+
+  .faqs .faq .faq-answer {
+    opacity: 0;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all 0.4s ease-out;
+  }
+
+  .faqs .faq.open .faq-question {
+    margin-bottom: 15px;
+  }
+
+  .faqs .faq.open .faq-question::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .faqs .faq.open .faq-answer {
+    max-height: 1000px;
+    opacity: 1;
   }
 `;
 
-const faqs = [
-  {
-    title:
-      'What are the most important technical skills to have for a junior job position?',
-    content: 'A really good answer',
-    id: 'q01',
-  },
-  {
-    title: 'What courses do you recommend?',
-    content: 'Another good answer...Wes Bos, Stephen Grider',
-    id: 'q02',
-  },
-  {
-    title: 'How do I get my first coding job without professional experience?',
-    content: 'A really good answer',
-    id: 'q03',
-  },
-  {
-    title: 'How can I build my confidence?',
-    content: 'A really good answer about how great of a resource we are',
-    id: 'q04',
-  },
-];
+export default function FaqSection() {
+  const [faqs, setFaqs] = useState([
+    {
+      question:
+        'What are the most important technical skills to have for a junior job position?',
+      answer: 'A really good answer',
+      open: true,
+    },
+    {
+      question: 'What courses do you recommend?',
+      answer: 'Another good answer...Wes Bos, Stephen Grider',
+      open: false,
+    },
+    {
+      question:
+        'How do I get my first coding job without professional experience?',
+      answer: 'A really good answer',
+      open: false,
+    },
+    {
+      question: 'How can I build my confidence?',
+      answer: 'A really good answer about how great of a resource we are',
+      open: false,
+    },
+  ]);
 
-export default function Accordion() {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const onTitleClick = (index) => {
-    setActiveIndex(index);
+  const toggleFAQ = (index) => {
+    setFaqs(
+      faqs.map((faq, i) => {
+        if (i === index) {
+          faq.open = !faq.open;
+        } else {
+          faq.open = false;
+        }
+        return faq;
+      })
+    );
   };
 
-  const renderedItems = questions.map((question, index) => {
-    const active = index === activeIndex ? 'active' : '';
-    return (
-      <React.Fragment key={question.title}>
-        <div className={`title ${active}`} onClick={() => onTitleClick(index)}>
-          <i className="fas fa-caret-down" />
-          {question.title}
-        </div>
-        <div className={`content ${active}`}>
-          <p>{question.content}</p>
-        </div>
-      </React.Fragment>
-    );
-  });
-  return <div className="ui styled accordion">{renderedItems}</div>;
+  return (
+    <StyledSection>
+      <header>
+        <h1>Frequently asked questions</h1>
+      </header>
+      <div className="faqs">
+        {faqs.map((faq, i) => (
+          <Accordion faq={faq} index={i} toggleFAQ={toggleFAQ} />
+        ))}
+      </div>
+    </StyledSection>
+  );
 }
