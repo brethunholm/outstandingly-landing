@@ -14,7 +14,6 @@ const StyledCard = styled.div`
   justify-items: center;
   margin: 5px;
   padding: 5px;
-  font-family: 'Roboto', Sans-Serif;
   font-style: italic;
   transition: 250ms ease-in-out;
   &:hover {

@@ -67,28 +67,28 @@ const StyledFooterMenu = styled.nav`
 
 export default function Footer() {
   return (
-    <SectionContainer background='var(--black)'>
+    <SectionContainer background="var(--black)">
       <StyledFooter>
         <StyledFooterMenu>
-          <h1 className='brand'>
-            <StaticImage src='../images/logo_200.png' alt='Logo' width={50} />
+          <h1 className="brand">
+            <StaticImage src="../images/logo_200.png" alt="Logo" width={50} />
             utstandingly
           </h1>
           <ul>
             <li>
-              <Link to='#'>Privacy</Link>
+              <Link to="#">Privacy</Link>
             </li>
             <li>
-              <Link to='#'>Terms of Service</Link>
+              <Link to="#">Terms of Service</Link>
             </li>
           </ul>
         </StyledFooterMenu>
-        <div className='wrap-subscribe-form'>
-          <div className='stay-connected'>
+        <div className="wrap-subscribe-form">
+          <div className="stay-connected">
             <h1>STAY</h1>
             <h1>CONNECTED</h1>
           </div>
-          <div className='form-wrapper'>
+          <div className="form-wrapper">
             <p>Subscribe to the latest updates from Outstandingly</p>
             <FormSubscribe />
           </div>

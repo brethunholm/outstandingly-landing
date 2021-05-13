@@ -19,12 +19,16 @@ const StyledSection = styled.div`
     justify-content: center;
     align-content: center;
     padding: 30px;
-    background-color: #25a2d5;
+    background-image: linear-gradient(
+      to bottom right,
+      var(--accent-light),
+      var(--accent-dark)
+    );
     border-bottom: 3px solid var(--accent-light);
   }
 
   header h1 {
-    color: white;
+    color: var(--white);
     font-size: 28px;
     font-weight: 700;
     text-transform: uppercase;
