@@ -41,6 +41,17 @@ const NavStyles = styled.div`
     margin-right: auto;
     margin-left: 1.3rem;
   }
+
+  @media (max-width: 600px) {
+    .nav-list {
+      height: 20px;
+    }
+    .nav-item {
+      opacity: 0;
+    }
+    .nav-item:first-child {
+      opacity: 1;
+  }
 `;
 
 export default function Nav() {
