@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
-import Button from './button';
 import styled from 'styled-components';
+import Button from './button';
 
 const StyledForm = styled.form`
   display: flex;
@@ -27,26 +27,25 @@ export default function FormSubscribe() {
     },
     onSubmit: () => {
       console.log('Form submitted...');
-      //add email address to email subscription service.
     },
   });
 
   return (
     <>
-      <StyledForm type="submit" onSubmit={formik.handleSubmit}>
+      <StyledForm type='submit' onSubmit={formik.handleSubmit}>
         <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="EMAIL ADDRESS"
+          type='email'
+          name='email'
+          id='email'
+          placeholder='EMAIL ADDRESS'
           onChange={formik.handleChange}
           value={formik.values.email}
         />
         <Button
-          className="submit-btn"
-          type="submit"
-          role="button"
-          text="SUBMIT"
+          className='submit-btn'
+          type='submit'
+          role='button'
+          text='SUBMIT'
         />
       </StyledForm>
     </>

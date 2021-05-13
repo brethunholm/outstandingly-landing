@@ -21,6 +21,12 @@ const StyledButton = styled.button`
   white-space: nowrap;
   transition: all 250ms ease-in-out;
 
+  @media(max-width: 690px){
+  padding: .5rem 0.75rem;
+  font-size: 0.65rem;
+
+  }
+
     &:before {
       content: '';
       position:absolute;
@@ -65,7 +71,7 @@ export default function Button({ type, text }) {
     });
   }, []);
   return (
-    <StyledButton ref={buttonRef} type={type} role="button">
+    <StyledButton ref={buttonRef} type={type} role='button'>
       {text}
     </StyledButton>
   );

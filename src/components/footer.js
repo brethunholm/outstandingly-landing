@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import styled from 'styled-components';
 import FormSubscribe from './formSubscribe';
@@ -13,12 +14,27 @@ const StyledFooter = styled.footer`
   align-items: center;
   gap: 1rem;
 
+  @media (max-width: 690px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .brand {
+    white-space: nowrap;
+  }
+
   .stay-connected {
     display: flex;
     flex-direction: column;
     font-size: 2rem;
-    align-items: center;
-    margin: 0 auto;
+    /* align-items: center;
+    margin: 0 auto; */
+
+    @media (max-width: 690px) {
+      margin: 0;
+      align-items: flex-start;
+    }
 
     h1:first-child {
       margin-bottom: -5px;
@@ -54,19 +70,16 @@ export default function Footer() {
     <SectionContainer background='var(--black)'>
       <StyledFooter>
         <StyledFooterMenu>
-          <h1>MENU</h1>
+          <h1 className='brand'>
+            <StaticImage src='../images/logo_200.png' alt='Logo' width={50} />
+            utstandingly
+          </h1>
           <ul>
             <li>
-              <Link to='#'>Menu Item</Link>
+              <Link to='#'>Privacy</Link>
             </li>
             <li>
-              <Link to='#'>Menu Item</Link>
-            </li>
-            <li>
-              <Link to='#'>Menu Item</Link>
-            </li>
-            <li>
-              <Link to='#'>Menu Item</Link>
+              <Link to='#'>Terms of Service</Link>
             </li>
           </ul>
         </StyledFooterMenu>
