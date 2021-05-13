@@ -38,6 +38,27 @@ const StyledHero = styled.div`
     font-size: 1.3rem;
     text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6);
   }
+
+  @media (max-width: 700px) {
+    .bg {
+      height: 30vh;
+      color: var(--btn-primary);
+      text-shadow: none;
+    }
+    .top-span {
+      text-shadow: none;
+      font-size: 1rem;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+    }
+
+    .hero-content {
+      transform: translateY(-25px);
+      font-weight: 900;
+    }
+  }
 `;
 
 function Hero() {
