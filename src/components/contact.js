@@ -15,7 +15,7 @@ const StyledContact = styled.div`
     'form';
   .title {
     grid-area: title;
-    font-family: 'Georgia', sans-serif;
+    /* font-family: 'Georgia', sans-serif; */
     color: var(--white);
     font-size: 1.5em;
     font-weight: 100;

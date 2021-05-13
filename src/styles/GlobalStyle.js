@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   --btn-primary-darker: #F7105A;
   --bnt-accent: #fe6192;
   --card-shadow: 1px 1px 8px #bbb;
+  font-family: 'Droid Serif', Serif;
 }
 
 body{
@@ -26,4 +27,10 @@ body{
     text-decoration: none;
     color: initial;
   }
+  
+  h1 {
+    font-family: 'Roboto', Sans-Serif;
+  }
+
+
 `;

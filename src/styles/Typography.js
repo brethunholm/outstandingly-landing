@@ -4,8 +4,8 @@ import Typography from 'typography';
 const TypographyBase = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.666,
-  headerFontFamily: ['Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
-  bodyFontFamily: ['Georgia', 'serif'],
+  headerFontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+  bodyFontFamily: ['Droid Serif', 'serif'],
 });
 
 export default TypographyBase;
