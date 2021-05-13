@@ -92,6 +92,10 @@ const StyledSection = styled.div`
     max-height: 1000px;
     opacity: 1;
   }
+
+  @media (max-width: 450px) {
+    font-size: 0.65rem;
+  }
 `;
 
 export default function FaqSection() {
