@@ -32,7 +32,7 @@ const StyledSection = styled.div`
   header h1 {
     color: var(--white);
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
   }
   .faqs {
