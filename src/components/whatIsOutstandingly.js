@@ -27,6 +27,14 @@ const StyledCard = styled.div`
     color: var(--accent-light);
   }
 
+  .vl {
+    border-left: 5px solid var(--accent-light);
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+  }
+
   .content {
     padding: 20px;
     grid-area: content;
@@ -44,8 +52,11 @@ const StyledCard = styled.div`
       'title'
       'content';
 
+    .vl {
+      display: none;
+    }
+
     .content {
-      overflow: scroll;
       padding: 0;
       margin: 0;
     }
@@ -73,6 +84,7 @@ export default function WhatIsOutstandingly() {
           What is <span className="highlight">Outstandingly?</span>
         </h1>
       </div>
+      <div className="vl" />
       <div className="content">
         <p>
           What is our purpose? We want to provide a next step to new developers
