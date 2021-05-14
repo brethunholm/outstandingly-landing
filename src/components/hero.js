@@ -36,6 +36,7 @@ const StyledHero = styled.div`
   .top-span {
     justify-self: center;
     font-size: 1.3rem;
+    color: var(--btn-primary);
     text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6);
   }
 
