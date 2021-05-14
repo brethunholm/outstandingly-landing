@@ -27,10 +27,10 @@ export default function ComingSoon({ data }) {
     <StyledComingSoon>
       <GatsbyImage
         image={data.logo.childImageSharp.gatsbyImageData}
-        alt='Outstandingly Logo'
+        alt="Outstandingly Logo"
       />
       <h1>Outstandingly</h1>
-      <Link to='/components'>.</Link>
+      <Link to="/components">.</Link>
     </StyledComingSoon>
   );
 }

@@ -9,6 +9,7 @@ import SectionContainer from '../components/section-container';
 import WhatIsOutstandingly from '../components/whatIsOutstandingly';
 import AboutUs from '../components/aboutUs';
 import Nav from '../components/navBar';
+import FaqSection from '../components/faq';
 
 export default function ComponentsPage() {
   return (
@@ -43,6 +44,7 @@ export default function ComponentsPage() {
         <Button text="This is a button" />
       </SectionContainer>
       <Footer />
+      <FaqSection />
     </>
   );
 }

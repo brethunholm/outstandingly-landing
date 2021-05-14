@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const NavStyles = styled.div`
   color: var(--white);
   box-sizing: border-box;
+  font-family: 'Roboto', Sans-Serif;
 
   .nav-list {
     background: var(--accent-dark);
@@ -26,8 +27,9 @@ const NavStyles = styled.div`
     border: none;
     background: none;
     color: var(--white);
-    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5); */
     font-size: 0.75rem;
+    font-weight: bold;
   }
 
   .nav-item button:hover {
@@ -39,40 +41,51 @@ const NavStyles = styled.div`
     margin-right: auto;
     margin-left: 1.3rem;
   }
+
+  @media (max-width: 600px) {
+    .nav-list {
+      height: 20px;
+    }
+    .nav-item {
+      opacity: 0;
+    }
+    .nav-item:first-child {
+      opacity: 1;
+  }
 `;
 
 export default function Nav() {
   return (
     <NavStyles>
-      <ul className="nav-list">
-        <li className="nav-item">
+      <ul className="nav-list nav">
+        <li className="nav-item ">
           <button type="button" onClick={() => scrollTo('#contact')}>
             🔥
           </button>
         </li>
-        <li className="nav-item">
+        <li className="nav-item nav">
           <button type="button" onClick={() => scrollTo('#whatIs')}>
-            What is Outstandingly?
+            WHAT IS OUTSTANDINGLY?
           </button>
         </li>
-        <li className="nav-item">
+        <li className="nav-item nav">
           <button type="button" onClick={() => scrollTo('#benefits')}>
-            Benefits
+            BENEFITS
           </button>
         </li>
-        <li className="nav-item">
+        <li className="nav-item nav">
           <button type="button" onClick={() => scrollTo('#team')}>
-            The Team
+            TEAM
           </button>
         </li>
-        <li className="nav-item">
+        <li className="nav-item nav ">
           <button type="button" onClick={() => scrollTo('#benefits')}>
-            Projects
+            PROJECTS
           </button>
         </li>
-        <li className="nav-item">
+        <li className="nav-item nav">
           <button type="button" onClick={() => scrollTo('#contact')}>
-            Contact Us
+            CONTACT US
           </button>
         </li>
       </ul>

@@ -93,10 +93,10 @@ export default function aboutUs() {
     />
   ));
   return (
-    <SectionContainer flex='column' id='team'>
+    <SectionContainer flex="column" id="team">
       <AboutUsStyled>
-        <h1>Meet the Team</h1>
-        <div className='team'>{theMembers}</div>
+        <h1>MEET THE TEAM</h1>
+        <div className="team">{theMembers}</div>
       </AboutUsStyled>
     </SectionContainer>
   );

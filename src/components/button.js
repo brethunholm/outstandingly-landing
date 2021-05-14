@@ -11,8 +11,8 @@ const StyledButton = styled.button`
   color: var(--white);
   border: none;
   border-radius: 2px;
-  padding: 1rem 1.25rem;
-  font-size: 1rem;
+  padding: .75rem 1rem;
+  font-size: 0.75rem;
   text-align: center;
   font-weight: 200;
   cursor: pointer;
@@ -20,6 +20,12 @@ const StyledButton = styled.button`
   word-wrap: nowrap;
   white-space: nowrap;
   transition: all 250ms ease-in-out;
+
+  @media(max-width: 690px){
+  padding: .5rem 0.75rem;
+  font-size: 0.65rem;
+
+  }
 
     &:before {
       content: '';

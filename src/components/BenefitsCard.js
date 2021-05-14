@@ -42,7 +42,7 @@ const StyledCard = styled.div`
 export default function BenefitsCard({ title, icon, content }) {
   return (
     <StyledCard>
-      <FontAwesomeIcon className='icon' icon={icon} />
+      <FontAwesomeIcon className="icon" icon={icon} />
       <h5>{title}</h5>
       <p>{content}</p>
     </StyledCard>
