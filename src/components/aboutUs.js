@@ -1,10 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import Aos from 'aos';
 import MembersCard from './MembersCard';
 import SectionContainer from './section-container';
-import 'aos/dist/aos.css';
 
 const AboutUsStyled = styled.div`
   display: flex;
@@ -34,14 +32,6 @@ const AboutUsStyled = styled.div`
   }
 `;
 export default function aboutUs() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1500,
-      easing: 'ease-in',
-      anchorPlacement: 'top-top',
-      once: true,
-    });
-  }, []);
   const teamImages = useStaticQuery(graphql`
     query {
       bre: file(relativePath: { regex: "/bre/i" }) {
@@ -107,14 +97,12 @@ export default function aboutUs() {
     />
   ));
   return (
-    <SectionContainer flex="column" id="team" className="grids">
+    <SectionContainer flex="column" id="team">
       <AboutUsStyled>
         <h1>
           MEET THE <span className="highlight">TEAM</span>
         </h1>
-        <div className="team boxes" data-aos="slide-right">
-          {theMembers}
-        </div>
+        <div className="team">{theMembers}</div>
       </AboutUsStyled>
     </SectionContainer>
   );

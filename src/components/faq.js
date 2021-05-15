@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import Aos from 'aos';
 import Accordion from './Accordion';
 import arrow from '../images/down-arrow.svg';
-import 'aos/dist/aos.css';
 
 const StyledSection = styled.div`
   * {
@@ -101,12 +99,6 @@ const StyledSection = styled.div`
 `;
 
 export default function FaqSection() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1500,
-      anchorPlacement: 'top-top',
-    });
-  }, []);
   const [faqs, setFaqs] = useState([
     {
       question:
@@ -146,11 +138,11 @@ export default function FaqSection() {
   };
 
   return (
-    <StyledSection className="grids">
+    <StyledSection>
       <header>
         <h1>Frequently asked questions</h1>
       </header>
-      <div className="faqs boxes" data-aos="fade-right">
+      <div className="faqs">
         {faqs.map((faq, i) => (
           <Accordion faq={faq} index={i} toggleFAQ={toggleFAQ} />
         ))}

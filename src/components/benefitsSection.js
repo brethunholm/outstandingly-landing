@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+
 import {
   faLaptopCode,
   faFileSignature,
@@ -44,14 +43,6 @@ const StyledBenefits = styled.div`
 `;
 
 export default function BenefitsSection() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-      easing: 'ease-in',
-      anchorPlacement: 'top-top',
-      once: true,
-    });
-  }, []);
   const benniesCards = bennies.map((card) => (
     <BenefitsCard
       key={card.id}
@@ -66,10 +57,8 @@ export default function BenefitsSection() {
         <h1>
           Why <span className="highlight">Outstandingly?</span>
         </h1>
-        <div className="grids">
-          <div className="container boxes" data-aos="fade-up">
-            {benniesCards}
-          </div>
+        <div>
+          <div className="container">{benniesCards}</div>
         </div>
       </StyledBenefits>
     </SectionContainer>
