@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import MembersCard from './MembersCard';
 import SectionContainer from './section-container';
