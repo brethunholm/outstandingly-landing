@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import MembersCard from './MembersCard';
 import SectionContainer from './section-container';
 
+
 const AboutUsStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -97,12 +98,14 @@ export default function aboutUs() {
     />
   ));
   return (
-    <SectionContainer flex="column" id="team">
+    <SectionContainer flex="column" id="team" className="grids">
       <AboutUsStyled>
         <h1>
           MEET THE <span className="highlight">TEAM</span>
         </h1>
+
         <div className="team">{theMembers}</div>
+
       </AboutUsStyled>
     </SectionContainer>
   );

@@ -57,8 +57,10 @@ export default function BenefitsSection() {
         <h1>
           Why <span className="highlight">Outstandingly?</span>
         </h1>
+
         <div>
           <div className="container">{benniesCards}</div>
+
         </div>
       </StyledBenefits>
     </SectionContainer>
