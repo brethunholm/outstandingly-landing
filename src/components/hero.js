@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 const StyledHero = styled.div`
   .bg {
     width: 100vw;
-    height: 60vh;
+    height: 80vh;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -36,6 +36,7 @@ const StyledHero = styled.div`
   .top-span {
     justify-self: center;
     font-size: 1.3rem;
+    color: var(--btn-primary);
     text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6);
   }
 

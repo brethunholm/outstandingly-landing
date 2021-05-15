@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import {
   faLaptopCode,
   faFileSignature,
@@ -16,13 +18,24 @@ const StyledBenefits = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   .container {
     display: flex;
-    max-width: 700px;
+    max-width: 900px;
     justify-content: center;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
+  }
+
+  h1 {
+    padding: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .highlight {
+    color: var(--btn-primary);
   }
 
   @media (max-width: 730px) {
@@ -31,6 +44,14 @@ const StyledBenefits = styled.div`
 `;
 
 export default function BenefitsSection() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: 'ease-in',
+      anchorPlacement: 'top-top',
+      once: true,
+    });
+  }, []);
   const benniesCards = bennies.map((card) => (
     <BenefitsCard
       key={card.id}
@@ -40,10 +61,16 @@ export default function BenefitsSection() {
     />
   ));
   return (
-    <SectionContainer background='#f1f2f6' id='benefits'>
+    <SectionContainer background="#f1f2f6" id="benefits">
       <StyledBenefits>
-        <h1>Why Outstandingly?</h1>
-        <div className='container'>{benniesCards}</div>
+        <h1>
+          Why <span className="highlight">Outstandingly?</span>
+        </h1>
+        <div className="grids">
+          <div className="container boxes" data-aos="fade-up">
+            {benniesCards}
+          </div>
+        </div>
       </StyledBenefits>
     </SectionContainer>
   );
