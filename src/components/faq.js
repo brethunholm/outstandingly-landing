@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import Aos from 'aos';
 import Accordion from './Accordion';
 import arrow from '../images/down-arrow.svg';
-import 'aos/dist/aos.css';
 
 const StyledSection = styled.div`
   * {
@@ -101,12 +99,6 @@ const StyledSection = styled.div`
 `;
 
 export default function FaqSection() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1500,
-      anchorPlacement: 'top-top',
-    });
-  }, []);
   const [faqs, setFaqs] = useState([
     {
       question:
