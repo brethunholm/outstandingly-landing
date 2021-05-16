@@ -24,7 +24,7 @@ const StyledSection = styled.div`
       var(--accent-light),
       var(--accent-dark)
     );
-    border-bottom: 3px solid var(--accent-light);
+    border-bottom: 3px solid var(--btn-primary);
   }
 
   header h1 {
