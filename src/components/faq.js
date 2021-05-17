@@ -138,7 +138,7 @@ export default function FaqSection() {
   };
 
   return (
-    <StyledSection className="grids">
+    <StyledSection className="grids" id="faq">
       <header>
         <h1>Frequently asked questions</h1>
       </header>

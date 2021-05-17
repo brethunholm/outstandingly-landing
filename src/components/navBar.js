@@ -42,6 +42,10 @@ const NavStyles = styled.div`
     margin-left: 1.3rem;
   }
 
+  button:hover {
+    color: var(--btn-primary);
+  }
+
   @media (max-width: 600px) {
     .nav-list {
       height: 20px;
@@ -78,14 +82,14 @@ export default function Nav() {
             TEAM
           </button>
         </li>
-        <li className="nav-item nav ">
-          <button type="button" onClick={() => scrollTo('#benefits')}>
-            PROJECTS
+        <li className="nav-item nav">
+          <button type="button" onClick={() => scrollTo('#contact')}>
+            CONTACT US
           </button>
         </li>
         <li className="nav-item nav">
           <button type="button" onClick={() => scrollTo('#contact')}>
-            CONTACT US
+            FAQS
           </button>
         </li>
       </ul>
