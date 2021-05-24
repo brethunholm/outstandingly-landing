@@ -1,8 +1,11 @@
-import { Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import PrivacyPolicy from '../content/privacyPolicy';
+import TosPolicy from '../content/tosPolicy';
 import FormSubscribe from './formSubscribe';
+import Modal from './Modal';
 import SectionContainer from './section-container';
 
 const StyledFooter = styled.footer`
@@ -13,6 +16,7 @@ const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin: auto;
 
   @media (max-width: 690px) {
     h1 {
@@ -66,29 +70,55 @@ const StyledFooterMenu = styled.nav`
 `;
 
 export default function Footer() {
+  const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showTos, setShowTos] = useState(false);
+
   return (
-    <SectionContainer background="var(--black)">
+    <SectionContainer background='var(--black)'>
       <StyledFooter>
         <StyledFooterMenu>
-          <h1 className="brand">
-            <StaticImage src="../images/logo_200.png" alt="Logo" width={50} />
+          <h1 className='brand'>
+            <StaticImage src='../images/logo_200.png' alt='Logo' width={50} />
             utstandingly
           </h1>
           <ul>
             <li>
-              <Link to="#">Privacy</Link>
+              <Link to='#!' onClick={() => setShowPrivacy(true)}>
+                Privacy
+              </Link>
+              <Modal
+                show={showPrivacy}
+                title='Privacy Policy'
+                body={<PrivacyPolicy />}
+                footer='Close'
+                close={() => {
+                  setShowPrivacy(false);
+                }}
+              />
             </li>
+
             <li>
-              <Link to="#">Terms of Service</Link>
+              <Link to='#!' onClick={() => setShowTos(true)}>
+                Terms of Service
+              </Link>
+              <Modal
+                show={showTos}
+                title='Terms Of Service Policy'
+                body={<TosPolicy />}
+                footer='Close'
+                close={() => {
+                  setShowTos(false);
+                }}
+              />
             </li>
           </ul>
         </StyledFooterMenu>
-        <div className="wrap-subscribe-form">
-          <div className="stay-connected">
+        <div className='wrap-subscribe-form'>
+          <div className='stay-connected'>
             <h1>STAY</h1>
             <h1>CONNECTED</h1>
           </div>
-          <div className="form-wrapper">
+          <div className='form-wrapper'>
             <p>Subscribe to the latest updates from Outstandingly</p>
             <FormSubscribe />
           </div>

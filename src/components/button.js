@@ -53,7 +53,7 @@ const StyledButton = styled.button`
   }
 `;
 
-export default function Button({ type, text }) {
+export default function Button({ type, text, handleClick }) {
   const buttonRef = useRef();
   useEffect(() => {
     const el = buttonRef.current;
@@ -71,7 +71,12 @@ export default function Button({ type, text }) {
     });
   }, []);
   return (
-    <StyledButton ref={buttonRef} type={type} role='button'>
+    <StyledButton
+      ref={buttonRef}
+      type={type}
+      role='button'
+      onClick={handleClick}
+    >
       {text}
     </StyledButton>
   );
