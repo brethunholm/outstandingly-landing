@@ -138,13 +138,13 @@ export default function FaqSection() {
   };
 
   return (
-    <StyledSection className="grids">
+    <StyledSection className='grids'>
       <header>
         <h1>Frequently asked questions</h1>
       </header>
-      <div className="faqs boxes" data-aos="fade-right">
+      <div className='faqs boxes' data-aos='fade-right'>
         {faqs.map((faq, i) => (
-          <Accordion faq={faq} index={i} toggleFAQ={toggleFAQ} />
+          <Accordion key={i} faq={faq} index={i} toggleFAQ={toggleFAQ} />
         ))}
       </div>
     </StyledSection>
