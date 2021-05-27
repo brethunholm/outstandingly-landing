@@ -1,22 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import BackgroundImage from 'gatsby-background-image';
+import { getImage } from 'gatsby-plugin-image';
+import { BgImage } from 'gbimage-bridge';
 import { graphql, useStaticQuery } from 'gatsby';
 
-const StyledHero = styled.div`
-  .bg {
-    width: 100vw;
-    height: 80vh;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    background: var(--light-grey);
-    color: var(--white);
-    padding: 4rem;
-    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
-    /* text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
-      0px -4px 10px rgba(255, 255, 255, 0.3); */
-    /* text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5); */
+const StyledHero = styled(BgImage)`
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--white);
+  padding: 4rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  background-position: bottom left !important;
+
+  &::before,
+  &::after {
   }
 
   h1 {
@@ -63,29 +64,31 @@ const StyledHero = styled.div`
 `;
 
 function Hero() {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "background.jpg" }) {
-        id
+  const { hero } = useStaticQuery(graphql`
+    query MyQuery {
+      hero: file(absolutePath: { regex: "/coffee/" }) {
+        blocks
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(width: 2000)
         }
       }
     }
   `);
 
+  const heroImg = getImage(hero);
   return (
-    <StyledHero>
-      <BackgroundImage className='bg' fluid={data.file.childImageSharp.fluid}>
+    <>
+      <StyledHero
+        image={heroImg}
+        preserveStackingContext
+        backgroundColor='#666'
+      >
         <div className='hero-content'>
           <span className='top-span'>DO SOMETHING</span>
           <h1>OUTSTANDINGLY</h1>
-          {/* <hr /> */}
         </div>
-      </BackgroundImage>
-    </StyledHero>
+      </StyledHero>
+    </>
   );
 }
 

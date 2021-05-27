@@ -17,22 +17,17 @@ const StyledSection = styled.div`
   header {
     display: flex;
     justify-content: center;
-    align-content: center;
-    padding: 30px;
-    background-image: linear-gradient(
-      to bottom right,
-      var(--accent-light),
-      var(--accent-dark)
-    );
-    border-bottom: 3px solid var(--btn-primary);
+    h1 {
+      padding: 2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .highlight {
+      color: var(--btn-primary);
+    }
   }
 
-  header h1 {
-    color: var(--white);
-    font-size: 28px;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
   .faqs {
     width: 100%;
     max-width: 768px;
@@ -44,7 +39,7 @@ const StyledSection = styled.div`
     margin: 15px;
     padding: 15px;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 2px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
 
@@ -52,7 +47,6 @@ const StyledSection = styled.div`
     position: relative;
     font-size: 20px;
     padding-right: 80px;
-
     transition: all 0.4s ease;
   }
 
@@ -77,7 +71,7 @@ const StyledSection = styled.div`
     opacity: 0;
     max-height: 0;
     overflow-y: hidden;
-    transition: all 0.4s ease-out;
+    transition: all 0.2s ease;
   }
 
   .faqs .faq.open .faq-question {
@@ -138,10 +132,11 @@ export default function FaqSection() {
   };
 
   return (
-
-    <StyledSection className="grids" id="faq">
+    <StyledSection className='grids' id='faq'>
       <header>
-        <h1>Frequently asked questions</h1>
+        <h1>
+          Frequently asked <span className='highlight'>questions</span>
+        </h1>
       </header>
       <div className='faqs boxes' data-aos='fade-right'>
         {faqs.map((faq, i) => (

@@ -1,20 +1,25 @@
 import React from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import styled from 'styled-components';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const NavStyles = styled.div`
   color: var(--white);
+  display: flex;
+  position: absolute;
+  top: 0;
   box-sizing: border-box;
   font-family: 'Roboto', Sans-Serif;
+  width: 100%;
+  z-index: 999;
 
   .nav-list {
-    background: var(--accent-dark);
-    box-shadow: 0px 0px 10px var(--grey);
+    width: 100%;
     margin: 0;
     padding: 1rem 0;
     border-radius: 2px;
     display: flex;
-    justify-content: flex-end;
+    justify-self: flex-end;
     align-items: center;
   }
 
@@ -43,7 +48,12 @@ const NavStyles = styled.div`
   }
 
   button:hover {
+    cursor: pointer;
     color: var(--btn-primary);
+  }
+
+  .brand{
+    cursor: pointer;
   }
 
   @media (max-width: 600px) {
@@ -61,34 +71,39 @@ const NavStyles = styled.div`
 export default function Nav() {
   return (
     <NavStyles>
-      <ul className="nav-list nav">
-        <li className="nav-item ">
-          <button type="button" onClick={() => scrollTo('#contact')}>
-            🔥
-          </button>
+      <ul className='nav-list nav'>
+        <li className='nav-item '>
+          <a className='brand' onClick={() => scrollTo('#contact')}>
+            <StaticImage
+              src='../images/logo_200.png'
+              width={50}
+              height={50}
+              alt='Logo'
+            />
+          </a>
         </li>
-        <li className="nav-item nav">
-          <button type="button" onClick={() => scrollTo('#whatIs')}>
+        <li className='nav-item nav'>
+          <button type='button' onClick={() => scrollTo('#whatIs')}>
             WHAT IS OUTSTANDINGLY?
           </button>
         </li>
-        <li className="nav-item nav">
-          <button type="button" onClick={() => scrollTo('#benefits')}>
+        <li className='nav-item nav'>
+          <button type='button' onClick={() => scrollTo('#benefits')}>
             BENEFITS
           </button>
         </li>
-        <li className="nav-item nav">
-          <button type="button" onClick={() => scrollTo('#team')}>
+        <li className='nav-item nav'>
+          <button type='button' onClick={() => scrollTo('#team')}>
             TEAM
           </button>
         </li>
-        <li className="nav-item nav">
-          <button type="button" onClick={() => scrollTo('#contact')}>
+        <li className='nav-item nav'>
+          <button type='button' onClick={() => scrollTo('#contact')}>
             CONTACT US
           </button>
         </li>
-        <li className="nav-item nav">
-          <button type="button" onClick={() => scrollTo('#contact')}>
+        <li className='nav-item nav'>
+          <button type='button' onClick={() => scrollTo('#contact')}>
             FAQS
           </button>
         </li>
