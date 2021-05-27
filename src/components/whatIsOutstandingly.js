@@ -49,7 +49,7 @@ const StyledCard = styled.div`
     display: grid;
     justify-items: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
   }
 
   @media (max-width: 900px) {
@@ -94,12 +94,12 @@ export default function WhatIsOutstandingly() {
       <div className='vl' />
       <div className='content'>
         <p>
-          What is our purpose? We want to provide a next step to new developers
-          that want to gain the experience required to get the dream job. We
-          strive to provide a productive, accessible, collaborative work
-          environment for new / developing developers. Collaborative project
-          based cohorts work together to create high quality portfolio projects,
-          gain real word experience working in a development team environment
+          We offer newer developers the next step to gain the experience
+          required to get their dream job. Our goal is to provide a productive,
+          accessible, collaborative work environment for new developers who are
+          struggling to get their foot in the door. Collaborative project-based
+          Creator Teams work together to create high-quality portfolio projects,
+          gain real-world experience, and work in a development team environment
           while building a career network.
         </p>
         <Button text='LEARN MORE' />
