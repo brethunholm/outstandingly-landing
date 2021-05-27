@@ -28,6 +28,12 @@ const StyledCard = styled.div`
     color: var(--accent-light);
   }
 
+  h1 {
+    padding: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
   .vl {
     border-left: 5px solid var(--accent-light);
     height: 60%;
@@ -79,14 +85,14 @@ const StyledCard = styled.div`
 
 export default function WhatIsOutstandingly() {
   return (
-    <StyledCard id="whatIs">
-      <div className="title">
+    <StyledCard id='whatIs'>
+      <div className='title'>
         <h1>
-          What is <span className="highlight">Outstandingly?</span>
+          What is <span className='highlight'>Outstandingly?</span>
         </h1>
       </div>
-      <div className="vl" />
-      <div className="content">
+      <div className='vl' />
+      <div className='content'>
         <p>
           What is our purpose? We want to provide a next step to new developers
           that want to gain the experience required to get the dream job. We
@@ -96,7 +102,7 @@ export default function WhatIsOutstandingly() {
           gain real word experience working in a development team environment
           while building a career network.
         </p>
-        <Button text="˖ LEARN MORE" />
+        <Button text='LEARN MORE' />
       </div>
     </StyledCard>
   );

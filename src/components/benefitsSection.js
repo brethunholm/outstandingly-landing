@@ -56,14 +56,15 @@ export default function BenefitsSection() {
       content={card.content}
     />
   ));
+
   return (
-    <SectionContainer background="#f1f2f6" id="benefits">
+    <SectionContainer background='#f1f2f6' id='benefits'>
       <StyledBenefits>
         <h1>
-          Why <span className="highlight">Outstandingly?</span>
+          Why <span className='highlight'>Outstandingly?</span>
         </h1>
-        <div className="grids">
-        <div className="container boxes" data-aos="fade-up">
+        <div className='grids'>
+          <div className='container boxes' data-aos='fade-up'>
             {benniesCards}
           </div>
         </div>

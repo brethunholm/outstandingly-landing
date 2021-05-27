@@ -16,8 +16,8 @@ export default function IndexPage() {
       <WhatIsOutstandingly />
       <BenefitsSection />
       <AboutUs />
-      <Contact />
       <FaqSection />
+      <Contact />
       <Footer />
     </>
   );
