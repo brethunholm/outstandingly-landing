@@ -17,10 +17,10 @@ const StyledCard = styled.div`
   grid-template-areas: 'title  content';
 
   .title {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    grid-area: title;
     text-transform: uppercase;
     text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
@@ -36,7 +36,7 @@ const StyledCard = styled.div`
 
   .vl {
     border-left: 5px solid var(--accent-light);
-    height: 60%;
+    height: 100%;
     position: absolute;
     left: 50%;
     margin-left: -3px;
@@ -49,7 +49,7 @@ const StyledCard = styled.div`
     display: grid;
     justify-items: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
   }
 
   @media (max-width: 900px) {
@@ -90,19 +90,28 @@ export default function WhatIsOutstandingly() {
         <h1>
           What is <span className='highlight'>Outstandingly?</span>
         </h1>
+        <Button text='LEARN MORE' />
       </div>
       <div className='vl' />
       <div className='content'>
         <p>
-          What is our purpose? We want to provide a next step to new developers
-          that want to gain the experience required to get the dream job. We
-          strive to provide a productive, accessible, collaborative work
-          environment for new / developing developers. Collaborative project
-          based cohorts work together to create high quality portfolio projects,
-          gain real word experience working in a development team environment
+          We offer newer developers the next step to gain the experience
+          required to get their dream job. Our goal is to provide a productive,
+          accessible, collaborative work environment for new developers who are
+          struggling to get their foot in the door. Collaborative project-based
+          Creator Teams work together to create high-quality portfolio projects,
+          gain real-world experience, and work in a development team environment
           while building a career network.
         </p>
-        <Button text='LEARN MORE' />
+        <p>
+          We strive to represent the under-represented and elevate those that
+          have had to struggle based solely on the basis of race, color,
+          religion, gender, gender expression, age, national origin, disability,
+          marital status, or sexual orientation. Our differences are our
+          strengths and each of us brings that strength to the team.
+          Representation makes our products and projects better and it’s
+          celebrated.
+        </p>
       </div>
     </StyledCard>
   );

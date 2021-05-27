@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
-  height: 275px;
-  width: 200px;
+  height: 375px;
+  width: 300px;
   overflow: hidden;
   /* border: 1px solid var(--white); */
   /* box-shadow: var(--card-shadow); */
@@ -15,7 +15,7 @@ const StyledCard = styled.div`
   justify-items: center;
   margin: 15px;
   padding: 5px;
-  font-style: italic;
+  /* font-style: italic; */
   transition: 250ms ease-in-out;
   &:hover {
     /* transform: scale(1.01); */
@@ -25,11 +25,11 @@ const StyledCard = styled.div`
   p {
     color: var(--grey-darker);
     line-height: 1.2rem;
-    font-size: 0.65rem;
-    text-align: center;
+    font-size: 20px;
+    text-align: left;
     margin: 0;
   }
-  h5 {
+  h3 {
     place-self: center;
     margin: 0;
     padding: 0;
@@ -44,7 +44,7 @@ export default function BenefitsCard({ title, icon, content }) {
   return (
     <StyledCard>
       <FontAwesomeIcon className='icon' icon={icon} />
-      <h5>{title}</h5>
+      <h3>{title}</h3>
       <p>{content}</p>
     </StyledCard>
   );

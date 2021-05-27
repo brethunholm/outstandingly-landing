@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import Aos from 'aos';
 import MembersCard from './MembersCard';
 import SectionContainer from './section-container';
-import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 const AboutUsStyled = styled.div`
@@ -33,7 +33,7 @@ const AboutUsStyled = styled.div`
     }
   }
 `;
-export default function aboutUs() {
+export default function AboutUs() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -102,12 +102,12 @@ export default function aboutUs() {
     />
   ));
   return (
-    <SectionContainer flex="column" id="team" className="grids">
+    <SectionContainer flex='column' id='team' className='grids'>
       <AboutUsStyled>
         <h1>
-          MEET THE <span className="highlight">TEAM</span>
+          MEET THE <span className='highlight'>TEAM</span>
         </h1>
-        <div className="team boxes" data-aos="slide-right">
+        <div className='team boxes' data-aos='fade-up'>
           {theMembers}
         </div>
       </AboutUsStyled>

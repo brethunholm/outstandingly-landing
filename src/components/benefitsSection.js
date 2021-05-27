@@ -22,7 +22,7 @@ const StyledBenefits = styled.div`
 
   .container {
     display: flex;
-    max-width: 900px;
+    max-width: 80vw;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -43,35 +43,6 @@ const StyledBenefits = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-
-export default function BenefitsSection() {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-  const benniesCards = bennies.map((card) => (
-    <BenefitsCard
-      key={card.id}
-      title={card.title}
-      icon={card.icon}
-      content={card.content}
-    />
-  ));
-
-  return (
-    <SectionContainer background='#f1f2f6' id='benefits'>
-      <StyledBenefits>
-        <h1>
-          Why <span className='highlight'>Outstandingly?</span>
-        </h1>
-        <div className='grids'>
-          <div className='container boxes' data-aos='fade-up'>
-            {benniesCards}
-          </div>
-        </div>
-      </StyledBenefits>
-    </SectionContainer>
-  );
-}
 
 const bennies = [
   {
@@ -124,3 +95,32 @@ const bennies = [
     id: 6,
   },
 ];
+
+export default function BenefitsSection() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+  const benniesCards = bennies.map((card) => (
+    <BenefitsCard
+      key={card.id}
+      title={card.title}
+      icon={card.icon}
+      content={card.content}
+    />
+  ));
+
+  return (
+    <SectionContainer background='#f1f2f6' id='benefits'>
+      <StyledBenefits>
+        <h1>
+          Why <span className='highlight'>Outstandingly?</span>
+        </h1>
+        <div className='grids'>
+          <div className='container boxes' data-aos='fade-up'>
+            {benniesCards}
+          </div>
+        </div>
+      </StyledBenefits>
+    </SectionContainer>
+  );
+}
