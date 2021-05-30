@@ -9,14 +9,21 @@ import 'aos/dist/aos.css';
 const AboutUsStyled = styled.div`
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
+
   .team {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+
+  .team-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
   }
   h1 {
     font-size: 2rem;
@@ -68,34 +75,32 @@ export default function AboutUs() {
 
   const members = [
     {
-      name: 'Luke Gartland',
+      name: 'Luke',
       img: teamImages.luke.childImageSharp.gatsbyImageData,
       about: 'Luke enjoys sailing, kitesurfing and coding.',
-      key: 1,
     },
     {
-      name: 'Bre Thunholm',
+      name: 'Bre',
       img: teamImages.bre.childImageSharp.gatsbyImageData,
       about: 'Is pretty and a coding super star.',
-      key: 2,
     },
     {
-      name: 'Patrick Franz',
+      name: 'Patrick',
       img: teamImages.patty.childImageSharp.gatsbyImageData,
-      about: 'Has a dog named salty.',
-      key: 3,
+      about:
+        'Holds a firm belief that people are pretty damn amazing when given a chance. Loves to explore the deep seas and steep rock. ',
     },
     {
-      name: 'Andrew ???',
+      name: 'Andrew',
       img: teamImages.andrew.childImageSharp.gatsbyImageData,
-      about: 'Enjoys a good suit.',
-      key: 4,
+      about:
+        'Always thinking about big ideas and questions such as what is the difference between a pizza party and pizza dinner. Able to fold a fitted sheet.',
     },
   ];
 
-  const theMembers = members.map((member) => (
+  const theMembers = members.map((member, index) => (
     <MembersCard
-      key={member.key}
+      key={index}
       name={member.name}
       img={member.img}
       about={member.about}
@@ -107,7 +112,8 @@ export default function AboutUs() {
         <h1>
           MEET THE <span className='highlight'>TEAM</span>
         </h1>
-        <div className='team boxes' data-aos='fade-up'>
+
+        <div className='team-wrap' data-aos='fade-up'>
           {theMembers}
         </div>
       </AboutUsStyled>

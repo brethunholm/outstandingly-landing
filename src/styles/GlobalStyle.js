@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   --white: #f1f2f6;
   --white-darker: #ecf0f1;
   --grey: #999;
-  --grey-darker: #777;
+  --grey-darker: #666;
   --light-grey: #ddd;
   --grey: #737373;
   --accent-light: #41FFE0;
@@ -29,7 +29,9 @@ body{
   }
   
   h1 {
-    font-family: 'Roboto', Sans-Serif;
+    padding: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
   }
 
 
