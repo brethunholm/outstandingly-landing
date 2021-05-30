@@ -6,8 +6,6 @@ const StyledCard = styled.div`
   height: 375px;
   width: 300px;
   overflow: hidden;
-  /* border: 1px solid var(--white); */
-  /* box-shadow: var(--card-shadow); */
   border-radius: 5px;
   background-color: var(--white);
   display: grid;
@@ -15,7 +13,6 @@ const StyledCard = styled.div`
   justify-items: center;
   margin: 15px;
   padding: 5px;
-  /* font-style: italic; */
   transition: 250ms ease-in-out;
   &:hover {
     /* transform: scale(1.01); */

@@ -29,12 +29,6 @@ const StyledBenefits = styled.div`
     flex-wrap: wrap;
   }
 
-  h1 {
-    padding: 2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-
   .highlight {
     color: var(--btn-primary);
   }
