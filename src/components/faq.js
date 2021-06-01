@@ -1,31 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Accordion from './Accordion';
 import arrow from '../images/down-arrow.svg';
 
 const StyledSection = styled.div`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', Sans-Serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
   }
 
-  body {
-    background-color: #eee;
-  }
-  header {
-    display: flex;
-    justify-content: center;
-    h1 {
-      padding: 2rem;
-      font-weight: 500;
-      text-transform: uppercase;
-    }
-
-    .highlight {
-      color: var(--btn-primary);
-    }
+  .highlight {
+    color: var(--btn-primary);
   }
 
   .faqs {
@@ -133,11 +120,10 @@ export default function FaqSection() {
 
   return (
     <StyledSection className='grids' id='faq'>
-      <header>
-        <h1>
-          Frequently asked <span className='highlight'>questions</span>
-        </h1>
-      </header>
+      <h1>
+        Frequently Asked <span className='highlight'>Questions</span>
+      </h1>
+
       <div className='faqs boxes' data-aos='fade-right'>
         {faqs.map((faq, i) => (
           <Accordion key={i} faq={faq} index={i} toggleFAQ={toggleFAQ} />

@@ -13,8 +13,8 @@ export default function IndexPage() {
     <>
       <Nav />
       <Hero />
-      <WhatIsOutstandingly />
       <BenefitsSection />
+      <WhatIsOutstandingly />
       <AboutUs />
       <FaqSection />
       <Contact />

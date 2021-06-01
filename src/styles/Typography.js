@@ -4,8 +4,18 @@ import Typography from 'typography';
 const TypographyBase = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.666,
-  headerFontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-  bodyFontFamily: ['Droid Serif', 'serif'],
+  headerFontFamily: ['Libre Baskerville', 'serif'],
+  bodyFontFamily: ['Open Sans', 'san-serif'],
+  googleFonts: [
+    {
+      name: 'Libre Baskerville',
+      styles: ['400,700'],
+    },
+    {
+      name: 'Open Sans',
+      styles: ['200, 400, 600, 700'],
+    },
+  ],
 });
 
 export default TypographyBase;

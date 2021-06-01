@@ -110,7 +110,7 @@ export default function AboutUs() {
     <SectionContainer flex='column' id='team' className='grids'>
       <AboutUsStyled>
         <h1>
-          MEET THE <span className='highlight'>TEAM</span>
+          Meet The <span className='highlight'>Team</span>
         </h1>
 
         <div className='team-wrap' data-aos='fade-up'>

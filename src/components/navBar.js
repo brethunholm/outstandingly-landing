@@ -12,6 +12,7 @@ const NavStyles = styled.div`
   font-family: 'Roboto', Sans-Serif;
   width: 100%;
   z-index: 999;
+  padding: 0 50px;
 
   .nav-list {
     width: 100%;
@@ -54,6 +55,11 @@ const NavStyles = styled.div`
 
   .brand{
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: var(--white);
   }
 
   @media (max-width: 600px) {
@@ -80,6 +86,7 @@ export default function Nav() {
               height={50}
               alt='Logo'
             />
+            utstandingly
           </a>
         </li>
         <li className='nav-item nav'>

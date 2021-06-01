@@ -14,11 +14,11 @@ const StyledContact = styled.div`
     'title'
     'form';
   .title {
-    grid-area: title;
-    /* font-family: 'Georgia', sans-serif; */
     color: var(--white);
-    font-size: 1.5em;
-    font-weight: 100;
+  }
+
+  .highlight {
+    color: var(--btn-primary);
   }
 
   .form {
@@ -58,35 +58,37 @@ export default function Contact() {
     },
   });
   return (
-    <StyledContact id="contact">
-      <h1 className="title">CONTACT US</h1>
-      <form className="form">
+    <StyledContact id='contact'>
+      <h1 className='title'>
+        Contact <span className='highlight'>Us</span>
+      </h1>
+      <form className='form'>
         <input
-          type="text"
-          name="name"
-          id="name"
+          type='text'
+          name='name'
+          id='name'
           onChange={formik.handleChange}
           value={formik.values.name}
-          placeholder="Name"
+          placeholder='Name'
         />
         <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email"
+          type='email'
+          name='email'
+          id='email'
+          placeholder='Email'
           onChange={formik.handleChange}
           value={formik.values.email}
         />
         <input
-          type="text"
-          name="message"
-          id="message"
-          placeholder="Message"
+          type='text'
+          name='message'
+          id='message'
+          placeholder='Message'
           onChange={formik.handleChange}
           value={formik.values.message}
         />
       </form>
-      <Button type="submit" text="˖ SEND MESSAGE" />
+      <Button type='submit' text='˖ SEND MESSAGE' />
     </StyledContact>
   );
 }

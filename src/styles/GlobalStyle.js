@@ -15,8 +15,10 @@ export const GlobalStyle = createGlobalStyle`
   --btn-primary: #F83D79;
   --btn-primary-darker: #F7105A;
   --bnt-accent: #fe6192;
+  --brand-red: #dc3a38;
+  --brand-blue: #2ca8e3;
   --card-shadow: 1px 1px 8px #bbb;
-  font-family: 'Droid Serif', Serif;
+  
 }
 
 body{
@@ -31,8 +33,9 @@ body{
   h1 {
     padding: 2rem;
     font-weight: 500;
-    text-transform: uppercase;
   }
+
+
 
 
 `;

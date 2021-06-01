@@ -3,63 +3,48 @@ import styled from 'styled-components';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
 import { graphql, useStaticQuery } from 'gatsby';
+import Button from './button';
 
 const StyledHero = styled(BgImage)`
   width: 100%;
   min-height: 90vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   color: var(--white);
   padding: 4rem;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  /* text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8); */
+  background-color: rgba(0, 0, 0, 0.6) !important;
   background-position: bottom left !important;
 
-  &::before,
-  &::after {
-  }
-
-  h1 {
-    font-size: 5rem;
-    padding: 0.3rem;
-    font-weight: bold;
-    font-family: 'Roboto', Sans-Serif;
+  .highlight {
+    color: var(--brand-blue);
   }
 
   .hero-content {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    grid-template-columns: 1fr;
-    font-family: 'Roboto', Sans-Serif;
-  }
 
-  .top-span {
-    justify-self: center;
-    font-size: 1.3rem;
-    color: var(--btn-primary);
-    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6);
-  }
-
-  @media (max-width: 700px) {
-    .bg {
-      height: 30vh;
-      color: var(--btn-primary);
-      text-shadow: none;
+    .headline {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
     }
-    .top-span {
-      text-shadow: none;
+    .bi-line {
+      font-size: 1.25rem;
+      margin-bottom: 50px;
+      font-family: 'Open Sans';
+      font-weight: 200;
+    }
+    button {
+      position: relative;
+      text-transform: uppercase;
       font-size: 1rem;
     }
-
-    h1 {
-      font-size: 1.85rem;
-    }
-
-    .hero-content {
-      transform: translateY(-25px);
-      font-weight: 900;
-    }
+  }
+  @media (max-width: 700px) {
   }
 `;
 
@@ -84,8 +69,14 @@ function Hero() {
         backgroundColor='#666'
       >
         <div className='hero-content'>
-          <span className='top-span'>DO SOMETHING</span>
-          <h1>OUTSTANDINGLY</h1>
+          <h1 className='headline'>
+            Gain real-world experience to kick start your career in tech
+          </h1>
+          <h2 className='bi-line'>
+            Outstandingly brings people together to create world class
+            portfolios in the tech sector
+          </h2>
+          <Button text='Apply Now' />
         </div>
       </StyledHero>
     </>

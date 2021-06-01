@@ -71,12 +71,7 @@ export default function Button({ type, text, handleClick }) {
     });
   }, []);
   return (
-    <StyledButton
-      ref={buttonRef}
-      type={type}
-      role='button'
-      onClick={handleClick}
-    >
+    <StyledButton ref={buttonRef} type={type} onClick={handleClick}>
       {text}
     </StyledButton>
   );

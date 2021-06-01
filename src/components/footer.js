@@ -25,6 +25,9 @@ const StyledFooter = styled.footer`
   }
 
   .brand {
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans';
     white-space: nowrap;
   }
 
@@ -79,7 +82,7 @@ export default function Footer() {
         <StyledFooterMenu>
           <h1 className='brand'>
             <StaticImage src='../images/logo_200.png' alt='Logo' width={50} />
-            utstandingly
+            Outstandingly
           </h1>
           <ul>
             <li>
@@ -114,10 +117,6 @@ export default function Footer() {
           </ul>
         </StyledFooterMenu>
         <div className='wrap-subscribe-form'>
-          <div className='stay-connected'>
-            <h1>STAY</h1>
-            <h1>CONNECTED</h1>
-          </div>
           <div className='form-wrapper'>
             <p>Subscribe to the latest updates from Outstandingly</p>
             <FormSubscribe />

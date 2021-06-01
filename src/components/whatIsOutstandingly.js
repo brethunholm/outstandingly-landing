@@ -21,17 +21,9 @@ const StyledCard = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
-    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
   .highlight {
     color: var(--accent-light);
-  }
-
-  h1 {
-    padding: 2rem;
-    font-weight: 500;
-    text-transform: uppercase;
   }
 
   .vl {
