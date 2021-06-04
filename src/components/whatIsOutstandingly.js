@@ -1,20 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BgImage } from 'gbimage-bridge';
 import Button from './button';
 
 const StyledCard = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-image: linear-gradient(
-    to bottom right,
-    var(--accent-light),
-    var(--accent-dark)
-  );
+  grid-template-columns: 1fr 2px 1fr;
 
-  color: var(--white);
+  color: var(--black);
   padding: 2rem;
   gap: 1rem;
-  grid-template-areas: 'title  content';
+  grid-template-areas: 'title vl content';
 
   .title {
     display: flex;
@@ -23,25 +19,18 @@ const StyledCard = styled.div`
     align-items: center;
   }
   .highlight {
-    color: var(--accent-light);
+    color: var(--highlight-pink);
   }
 
   .vl {
-    border-left: 5px solid var(--accent-light);
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    margin-left: -3px;
+    border-left: 5px solid var(--black);
   }
 
   .content {
     padding: 20px;
     grid-area: content;
-    margin: 2rem;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    text-align: left;
+    text-align: justify;
+    line-height: 30px;
   }
 
   @media (max-width: 900px) {

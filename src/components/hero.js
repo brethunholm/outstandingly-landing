@@ -15,7 +15,7 @@ const StyledHero = styled(BgImage)`
   padding: 4rem;
   /* text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8); */
   background-color: rgba(0, 0, 0, 0.6) !important;
-  background-position: bottom left !important;
+  background-position: bottom center !important;
 
   .highlight {
     color: var(--brand-blue);
@@ -30,7 +30,6 @@ const StyledHero = styled(BgImage)`
     .headline {
       margin: 0;
       font-size: 2rem;
-      font-weight: bold;
     }
     .bi-line {
       font-size: 1.25rem;
@@ -51,7 +50,7 @@ const StyledHero = styled(BgImage)`
 function Hero() {
   const { hero } = useStaticQuery(graphql`
     query MyQuery {
-      hero: file(absolutePath: { regex: "/coffee/" }) {
+      hero: file(absolutePath: { regex: "/open-office-2/" }) {
         blocks
         childImageSharp {
           gatsbyImageData(width: 2000)

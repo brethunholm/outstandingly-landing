@@ -82,7 +82,7 @@ export default function Footer() {
         <StyledFooterMenu>
           <h1 className='brand'>
             <StaticImage src='../images/logo_200.png' alt='Logo' width={50} />
-            Outstandingly
+            utstandingly
           </h1>
           <ul>
             <li>
