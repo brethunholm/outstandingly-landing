@@ -34,7 +34,7 @@ const AboutUsStyled = styled.div`
     color: var(--btn-primary);
   }
 
-  @media (min-width: 973px) and (max-width: 1294px) {
+  @media (min-width: 968px) and (max-width: 1284px) {
     .team {
       max-width: 800px;
     }
@@ -98,14 +98,6 @@ export default function AboutUs() {
     },
   ];
 
-  const theMembers = members.map((member, index) => (
-    <MembersCard
-      key={index}
-      name={member.name}
-      img={member.img}
-      about={member.about}
-    />
-  ));
   return (
     <SectionContainer flex='column' id='team' className='grids'>
       <AboutUsStyled>
@@ -114,7 +106,14 @@ export default function AboutUs() {
         </h1>
 
         <div className='team-wrap' data-aos='fade-up'>
-          {theMembers}
+          {members.map((member, index) => (
+            <MembersCard
+              key={index}
+              name={member.name}
+              img={member.img}
+              about={member.about}
+            />
+          ))}
         </div>
       </AboutUsStyled>
     </SectionContainer>
