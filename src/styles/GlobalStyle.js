@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   --accent-light: #41FFE0;
   --accent-dark: #0544C8;
   --btn-primary: #F83D79;
+  --highlight-pink: #F83D79;
   --btn-primary-darker: #F7105A;
   --bnt-accent: #fe6192;
   --brand-red: #dc3a38;
