@@ -17,6 +17,7 @@ const StyledCard = styled.div`
   .title {
     grid-area: title;
     display: flex;
+    min-width: 300px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -48,15 +49,23 @@ const StyledCard = styled.div`
   }
 
   @media (max-width: 900px) {
-    display: grid;
     grid-template-columns: 1fr;
+    padding: 10px 40px;
+
     grid-template-areas:
       'title'
       'vl'
-      'content';
+      'text_content';
+
+    &.flipped {
+      grid-template-areas:
+        'title'
+        'vl'
+        'text_content' !important;
+    }
 
     .vl {
-      border: none;
+      display: none;
       border-bottom: 5px solid var(--black);
     }
 
