@@ -7,6 +7,7 @@ import Footer from '../components/footer';
 import Hero from '../components/hero';
 import Navbar from '../components/navBar';
 import WhatIsOutstandingly from '../components/whatIsOutstandingly';
+import WhatWeBelieve from '../components/whatWeBelieve';
 
 export default function IndexPage() {
   return (
@@ -14,6 +15,7 @@ export default function IndexPage() {
       <Navbar />
       <Hero />
       <WhatIsOutstandingly />
+      <WhatWeBelieve />
       <BenefitsSection />
       <AboutUs />
       <FaqSection />

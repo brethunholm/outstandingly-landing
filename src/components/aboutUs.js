@@ -34,7 +34,7 @@ const AboutUsStyled = styled.div`
     color: var(--btn-primary);
   }
 
-  @media (min-width: 968px) and (max-width: 1284px) {
+  @media (min-width: 973px) and (max-width: 1294px) {
     .team {
       max-width: 800px;
     }
