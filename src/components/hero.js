@@ -12,10 +12,14 @@ const StyledHero = styled(BgImage)`
   justify-content: center;
   align-items: center;
   color: var(--white);
-  padding: 4rem;
-  /* text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8); */
+  padding: 50px;
   background-color: rgba(0, 0, 0, 0.6) !important;
   background-position: bottom center !important;
+  padding: 100px 1rem;
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
 
   .highlight {
     color: var(--brand-blue);
@@ -26,12 +30,15 @@ const StyledHero = styled(BgImage)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 100px;
 
     .headline {
       margin: 0;
       font-size: 2rem;
+      padding: 0 10px;
     }
     .bi-line {
+      padding: 30px 10px;
       font-size: 1.25rem;
       margin-bottom: 50px;
       font-family: 'Open Sans';
@@ -42,8 +49,6 @@ const StyledHero = styled(BgImage)`
       text-transform: uppercase;
       font-size: 1rem;
     }
-  }
-  @media (max-width: 700px) {
   }
 `;
 

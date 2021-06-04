@@ -6,10 +6,12 @@ const MembersStyled = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 300px;
+  min-height: 500px;
   box-shadow: 0px 5px 27px 0px rgb(0 0 0 / 9%);
   text-align: top;
   margin: 10px;
-  height: 500px;
+  min-width: 300px;
+
   flex: 1;
   .gatsby-image-wrapper {
     min-height: 300px;
@@ -33,8 +35,8 @@ const MembersStyled = styled.div`
       height: 350px;
       width: 350px;
     }
-    height: 500px;
-    width: 350px;
+
+    min-width: 350px;
   }
 
   @media (min-width: 1700px) {
