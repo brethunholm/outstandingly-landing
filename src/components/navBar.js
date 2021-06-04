@@ -53,24 +53,23 @@ const NavStyles = styled.div`
     color: var(--btn-primary);
   }
 
-  .brand{
+  .brand {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
     color: var(--white);
+
+    .gatsby-image-wrapper {
+      min-width: 50px;
+    }
   }
 
   @media (max-width: 600px) {
     .nav-list {
       height: 20px;
     }
-    .nav-item {
-      opacity: 0;
-    }
-    .nav-item:first-child {
-      opacity: 1;
   }
 `;
 

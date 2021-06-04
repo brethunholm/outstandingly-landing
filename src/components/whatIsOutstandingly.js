@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BgImage } from 'gbimage-bridge';
 import Button from './button';
 
 const StyledCard = styled.div`
@@ -18,11 +17,13 @@ const StyledCard = styled.div`
     justify-content: center;
     align-items: center;
   }
+
   .highlight {
     color: var(--highlight-pink);
   }
 
   .vl {
+    border: none;
     border-left: 5px solid var(--black);
   }
 
@@ -38,10 +39,12 @@ const StyledCard = styled.div`
     grid-template-columns: 1fr;
     grid-template-areas:
       'title'
+      'vl'
       'content';
 
     .vl {
-      display: none;
+      border: none;
+      border-bottom: 5px solid var(--black);
     }
 
     .content {
@@ -68,10 +71,15 @@ export default function WhatIsOutstandingly() {
   return (
     <StyledCard id='whatIs'>
       <div className='title'>
-        <h1>
+        {/* <h1>
           What is <span className='highlight'>Outstandingly?</span>
+        </h1> */}
+        <h1 className='heading'>
+          Break out of the endless tutorial cycle and learn{' '}
+          <span className='highlight'>web development</span> on the job
         </h1>
-        <Button text='LEARN MORE' />
+
+        <Button text='SHOW ME HOW' />
       </div>
       <div className='vl' />
       <div className='content'>
