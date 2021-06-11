@@ -23,6 +23,11 @@ export default function WhatIsOutstandingly() {
   );
 
   return (
-    <SideBySide headline={headline} btnText='SHOW ME HOW' sideText={sideText} />
+    <SideBySide
+      id='whatIs'
+      headline={headline}
+      btnText='SHOW ME HOW'
+      sideText={sideText}
+    />
   );
 }

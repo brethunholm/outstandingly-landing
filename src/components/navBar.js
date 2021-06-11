@@ -141,7 +141,7 @@ export default function Navbar() {
             </button>
           </li>
           <li className='nav-item'>
-            <button type='button' onClick={() => scrollTo('#contact')}>
+            <button type='button' onClick={() => scrollTo('#faqs')}>
               FAQS
             </button>
           </li>

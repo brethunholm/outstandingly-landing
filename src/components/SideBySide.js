@@ -89,10 +89,15 @@ const StyledCard = styled.div`
   }
 `;
 
-export default function SideBySide({ headline, btnText, sideText, flipped }) {
-  console.log(flipped);
+export default function SideBySide({
+  headline,
+  btnText,
+  sideText,
+  flipped,
+  id,
+}) {
   return (
-    <StyledCard className={flipped ? 'flipped' : ''}>
+    <StyledCard id={id} className={flipped ? 'flipped' : ''}>
       <div className='title'>
         <h1 className='heading'>{headline}</h1>
         <Button text={btnText} />

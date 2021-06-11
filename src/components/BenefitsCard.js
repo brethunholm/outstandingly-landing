@@ -14,7 +14,7 @@ const StyledCard = styled.div`
   flex-wrap: wrap;
   border-radius: 5px;
   background-color: white;
-  border: 3px solid var(--highlight-pink);
+  border: 1px solid #ddd;
   min-height: 350px;
   justify-items: center;
   padding: 5px;
@@ -58,7 +58,6 @@ const StyledCard = styled.div`
   }
 `;
 export default function BenefitsCard({ title, icon, content, image }) {
-  console.log(image);
   return (
     <StyledCard>
       <div className='image'>

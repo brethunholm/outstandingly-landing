@@ -21,6 +21,7 @@ const AboutUsStyled = styled.div`
 
   .team-wrap {
     display: flex;
+    height: 100%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;

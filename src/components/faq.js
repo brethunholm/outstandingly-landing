@@ -83,24 +83,49 @@ export default function FaqSection() {
   const [faqs, setFaqs] = useState([
     {
       question:
-        'What are the most important technical skills to have for a junior job position?',
+        'What are the selection criteria for joining Outstandingly as a Creator?',
       answer: 'A really good answer',
       open: true,
     },
     {
-      question: 'What courses do you recommend?',
-      answer: 'Another good answer...Wes Bos, Stephen Grider',
+      question: 'What if I want to be a Designer or Project Manager?',
+      answer: `Right now are teams are small and lean. If you only want to do design or project management this probably won/'t be a good fit for you. If you want be a developer with a focus on design or project management, you'll have teams fighting over you.`,
       open: false,
     },
     {
       question:
-        'How do I get my first coding job without professional experience?',
-      answer: 'A really good answer',
+        'I live in a different city/state/country can I still be part of Outstandingly?',
+      answer: `Definatley! The working world has become remote and our industry is so well suited for that. In fact, the entire Outstandingly Team is spread out across North America.`,
       open: false,
     },
     {
-      question: 'How can I build my confidence?',
-      answer: 'A really good answer about how great of a resource we are',
+      question: 'What does Outstandingly provide?',
+      answer: '',
+      open: false,
+    },
+    {
+      question: 'How much does all this cost?',
+      answer: '',
+      open: false,
+    },
+    {
+      question: 'What kind of commitment is required?',
+      answer: '',
+      open: false,
+    },
+    {
+      question: 'Is this a bootcamp?',
+      answer: `No ... not really. It's a group collaboration in a job-like setting. No one on your team is an experienced professional developer. There are no classes, no instructors and no grades. You'll be working together to solve problems, design solutions and get the project built.`,
+      open: false,
+    },
+    {
+      question: 'What kind of projects will we build?',
+      answer: ``,
+      open: false,
+    },
+    {
+      question: `I've done what feels like endless tutorials and side projects and still can't get a job. Can you help me?`,
+      answer: `You are the reason we founded Outstandingly! You've gained an understanding of web development, now you need to break out of that aptly called 'tutorial hell' and start applying those skills to bigger, cool projects that really can go somewhere.`,
       open: false,
     },
   ]);
@@ -119,7 +144,7 @@ export default function FaqSection() {
   };
 
   return (
-    <StyledSection className='grids' id='faq'>
+    <StyledSection className='grids' id='faqs'>
       <h1>
         Frequently Asked <span className='highlight'>Questions</span>
       </h1>
