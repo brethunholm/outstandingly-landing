@@ -78,12 +78,14 @@ export default function AboutUs() {
     {
       name: 'Luke',
       img: teamImages.luke.childImageSharp.gatsbyImageData,
-      about: 'Luke enjoys sailing, kitesurfing and coding.',
+      about:
+        'A self taught coding rock star currently rocking a man bun and handle bar mustache combo.',
     },
     {
       name: 'Bre',
       img: teamImages.bre.childImageSharp.gatsbyImageData,
-      about: 'Is pretty and a coding super star.',
+      about:
+        'Bre is an enthusiastic developer  and designer with a penchant for sharing her passions for web development with fellow coding enthusiasts.  Talk nerdy to me!',
     },
     {
       name: 'Patrick',
@@ -100,13 +102,13 @@ export default function AboutUs() {
   ];
 
   return (
-    <SectionContainer flex='column' id='team' className='grids'>
+    <SectionContainer flex="column" id="team" className="grids">
       <AboutUsStyled>
         <h1>
-          Meet The <span className='highlight'>Team</span>
+          Meet The <span className="highlight">Team</span>
         </h1>
 
-        <div className='team-wrap' data-aos='fade-up'>
+        <div className="team-wrap" data-aos="fade-up">
           {members.map((member, index) => (
             <MembersCard
               key={index}

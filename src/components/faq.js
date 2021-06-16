@@ -84,7 +84,7 @@ export default function FaqSection() {
     {
       question:
         'What are the selection criteria for joining Outstandingly as a Creator?',
-      answer: 'A really good answer',
+      answer: '',
       open: true,
     },
     {
@@ -95,7 +95,7 @@ export default function FaqSection() {
     {
       question:
         'I live in a different city/state/country can I still be part of Outstandingly?',
-      answer: `Definatley! The working world has become remote and our industry is so well suited for that. In fact, the entire Outstandingly Team is spread out across North America.`,
+      answer: `Definitely! The working world has become remote and our industry is so well suited for that. In fact, the entire Outstandingly Team is spread out across North America.`,
       open: false,
     },
     {
@@ -144,12 +144,12 @@ export default function FaqSection() {
   };
 
   return (
-    <StyledSection className='grids' id='faqs'>
+    <StyledSection className="grids" id="faqs">
       <h1>
-        Frequently Asked <span className='highlight'>Questions</span>
+        Frequently Asked <span className="highlight">Questions</span>
       </h1>
 
-      <div className='faqs boxes' data-aos='fade-right'>
+      <div className="faqs boxes" data-aos="fade-right">
         {faqs.map((faq, i) => (
           <Accordion key={i} faq={faq} index={i} toggleFAQ={toggleFAQ} />
         ))}
