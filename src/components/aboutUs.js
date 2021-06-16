@@ -78,8 +78,9 @@ export default function AboutUs() {
     {
       name: 'Luke',
       img: teamImages.luke.childImageSharp.gatsbyImageData,
-      about:
-        'A self taught coding rock star currently rocking a man bun and handle bar mustache combo.',
+      about: `
+        “Software Developer” – An organism that turns caffeine into software. An excellent multitasker, currently rocking a man bun and handlebar mustache.
+        `,
     },
     {
       name: 'Bre',
