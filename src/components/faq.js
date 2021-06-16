@@ -84,7 +84,8 @@ export default function FaqSection() {
     {
       question:
         'What are the selection criteria for joining Outstandingly as a Creator?',
-      answer: '',
+      answer:
+        'We are looking for people that are passionate, dedicated and excited to get involved',
       open: true,
     },
     {
