@@ -86,7 +86,7 @@ export default function AboutUs() {
       name: 'Bre',
       img: teamImages.bre.childImageSharp.gatsbyImageData,
       about:
-        'Bre is an enthusiastic developer  and designer with a penchant for sharing her passions for web development with fellow coding enthusiasts.  Talk nerdy to me!',
+        'An enthusiastic developer  and designer with a penchant for sharing her passions for web development with fellow coding enthusiasts.  Talk nerdy to me!',
     },
     {
       name: 'Patrick',
