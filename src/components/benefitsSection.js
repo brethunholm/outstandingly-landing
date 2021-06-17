@@ -86,7 +86,7 @@ const bennies = [
     title: `Not ready?`,
     icon: faFileSignature,
     content:
-      'We’ll get you ready. We’ll get you on track to succeed with a targeted roadmap that will build your skills incrementally and build your confidence exponentially',
+      'We’ll get you ready. We’ll get you on track to succeed with a targeted roadmap that will build your skills incrementally and build your confidence exponentially.',
     id: 6,
     image: 'learn',
   },
