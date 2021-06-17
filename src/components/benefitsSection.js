@@ -86,7 +86,7 @@ const bennies = [
     title: `Not ready?`,
     icon: faFileSignature,
     content:
-      'We’ll get you ready. We’ll get you on track to succeed with a targetted roadmap that will build your skills incrementally and build your confidence exponentially',
+      'We’ll get you ready. We’ll get you on track to succeed with a targeted roadmap that will build your skills incrementally and build your confidence exponentially',
     id: 6,
     image: 'learn',
   },
@@ -123,13 +123,13 @@ export default function BenefitsSection() {
   });
 
   return (
-    <SectionContainer background='white' id='benefits'>
+    <SectionContainer background="white" id="benefits">
       <StyledBenefits>
         <h1>
-          Why <span className='highlight'>Outstandingly?</span>
+          Why <span className="highlight">Outstandingly?</span>
         </h1>
 
-        <div className='container' data-aos='fade-up'>
+        <div className="container" data-aos="fade-up">
           {benniesCards}
         </div>
       </StyledBenefits>

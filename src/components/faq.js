@@ -85,12 +85,12 @@ export default function FaqSection() {
       question:
         'What are the selection criteria for joining Outstandingly as a Creator?',
       answer:
-        'We are looking for people that are passionate, dedicated and excited to get involved',
+        'We are looking for people that are passionate, dedicated and excited to get involved!',
       open: true,
     },
     {
       question: 'What if I want to be a Designer or Project Manager?',
-      answer: `Right now are teams are small and lean. If you only want to do design or project management this probably won/'t be a good fit for you. If you want be a developer with a focus on design or project management, you'll have teams fighting over you.`,
+      answer: `Right now are teams our small and lean. If you only want to do design or project management this probably won't be a good fit for you. If you want be a developer with a focus on design or project management, you'll have teams fighting over you.`,
       open: false,
     },
     {
